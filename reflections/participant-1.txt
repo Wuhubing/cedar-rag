@@ -1,0 +1,7 @@
+Wuhubing
+
+This project showed me how RAG separates document preparation, retrieval, and answer generation. Questions and source passages become searchable representations; selected passages then guide a fresh conversation to produce answers with chunk citations.
+
+Pure embedding retrieval had a notable limitation: for Q1, k=2 returned A2 and T1, missing A1’s access hours. Increasing k to 3 still missed A1. Q4 also showed that positive similarity does not establish answerability. Semantic overlap identifies related text, but each passage must actually support the requested claim.
+
+Next, I would test hybrid retrieval combining keyword matching and embedding ranking, measuring whether it recovers critical sources without adding excessive irrelevant context. For future collections containing informative diagrams, I would also explore image embeddings and cross-modal retrieval. This would extend the current text-only experiment while still requiring careful verification that retrieved visual evidence supports each answer.

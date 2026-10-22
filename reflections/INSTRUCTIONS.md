@@ -8,6 +8,10 @@ At your explicit request, `reflection-draft.txt` contains a separately labeled
 AI-assisted draft for revision. It is not marked as your final reflection.
 The project is confirmed as individual work, so only `participant-1.txt` is needed.
 
+Current status: `participant-1.txt` contains the author-approved final reflection
+(139 words), incorporating the author's additional ideas and editorial assistance.
+The earlier AI-assisted draft remains separate for provenance.
+
 In your own words, cover all three points:
 
 1. Explain how a question passes through retrieval to become a cited answer.

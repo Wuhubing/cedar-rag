@@ -5,8 +5,9 @@ compare keyword and real embedding retrieval, and hand selected evidence to fres
 answer conversations for cited answers and claim audits.
 
 The technical work is complete, and the author has confirmed **individual work**.
-The project author identity is **Wuhubing** (GitHub/Git identity). A final personal
-reflection and the course signup-sheet submission remain to be completed.
+The project author identity is **Wuhubing** (GitHub/Git identity). The author has
+approved and finalized the individual reflection. The course signup-sheet
+submission remains to be completed.
 
 **GitHub repository / link to submit in the course form:**
 [https://github.com/Wuhubing/cedar-rag](https://github.com/Wuhubing/cedar-rag).
@@ -20,11 +21,12 @@ submitted.
 
 - Author and individual status are recorded in [PARTICIPANTS.md](PARTICIPANTS.md).
   Confirm the course submission name if it differs from the Git/GitHub identity.
-- One final individual reflection, at most 150 words: **TODO** following
-  [reflections/INSTRUCTIONS.md](reflections/INSTRUCTIONS.md).
+- Final individual reflection: **complete**, 139 words, saved as
+  [reflections/participant-1.txt](reflections/participant-1.txt).
 - The author explicitly requested an AI-assisted draft, provided separately in
   [reflections/reflection-draft.txt](reflections/reflection-draft.txt) for revision.
-  It is not marked as a completed self-written reflection.
+  That earlier draft is retained separately; the author-approved final version
+  incorporates the author's additional reflection and editorial assistance.
 - There is no partner; pair roles and role swaps are not applicable.
 - Existing evidence was generated locally or in the recorded independent answer
   chats. No borrowed pair/instructor output is recorded. Label any later borrowed
@@ -313,11 +315,12 @@ be rebuilt using the setup commands and pinned requirements above.
 - [x] Four comparison rows with judgments and the k experiment.
 - [x] Both answer audits, preserved originals, and single instruction revisions.
 - [x] Record individual work and the Git/GitHub author identity in `PARTICIPANTS.md`.
-- [ ] Confirm the course submission name if different and write the final individual reflection (at most 150 words).
+- [x] Save the author-approved final individual reflection (at most 150 words).
+- [ ] Confirm the course submission name if it differs from the Git/GitHub identity.
 - [ ] Review the Codex-assisted judgments and confirm you can explain the code.
 - [x] Push this project to a same-name public GitHub repository and verify anonymous access.
 - [ ] Submit the repository link through the course signup sheet.
 
-The AI-assisted reflection draft was provided at the author's explicit request;
-the final personal reflection is still pending. The course signup-sheet URL was
-not supplied and has not been guessed.
+The earlier AI-assisted reflection draft is preserved. The final reflection was
+approved by the author after adding their own ideas and is saved separately.
+The course signup-sheet URL was not supplied and has not been guessed.

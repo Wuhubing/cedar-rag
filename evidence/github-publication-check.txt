@@ -23,16 +23,21 @@ A documentation follow-up records this verification and is pushed after the
 project commit. The final local/remote HEAD equality is checked after that push;
 its commit ID is available in Git history rather than embedded in this file.
 
-Current authorship status:
+Authorship status at initial publication (historical):
 - Individual work confirmed directly by the author.
 - Wuhubing is the authenticated GitHub and configured Git author identity.
 - No partner; paired roles and role swapping are not applicable.
 - The requested AI-assisted reflection draft is 118 words and labeled as a draft.
 - No final self-written reflection is marked complete.
 
+Reflection finalization update (2026-10-22 client date):
+- The author supplied additional reflection ideas and approved the edited version.
+- The final individual reflection is saved as reflections/participant-1.txt.
+- The reflection body is 139 words, within the 150-word limit.
+- The earlier AI-assisted draft is preserved separately; it is not the final file.
+
 Remaining before course submission:
-1. Revise the draft into your own final reflection (at most 150 words), save it as
-   reflections/participant-1.txt, and confirm the course submission name if needed.
+1. Confirm the course submission name if it differs from the Git/GitHub identity.
 2. Submit https://github.com/Wuhubing/cedar-rag in the course signup sheet.
 The signup-sheet URL was not supplied; this verification does not claim that the
 course form has been submitted.
