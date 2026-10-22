@@ -4,11 +4,12 @@ The assignment requires one individual reflection per participant, **no more tha
 150 words per person**. Do not ask Codex to write your personal explanation.
 This file is an instruction sheet, not a completed reflection.
 
-The project is confirmed as individual work, so only `participant-1.txt` is needed.
+The author reported individual work, so only `participant-1.txt` is needed.
 
-Current status: `participant-1.txt` contains the author's personally written
-replacement (149 words). Only deletions were made to meet the word limit;
-no new prose was added. The obsolete draft has been removed.
+Current status: `participant-1.txt` contains the replacement text provided by
+the author (149 words after two deletions). The author described it as personally
+written. No new prose was added during that replacement. An earlier AI-assisted
+draft was produced and subsequently removed from the current version.
 
 In your own words, cover all three points:
 
@@ -16,8 +17,8 @@ In your own words, cover all three points:
 2. Identify one failure or limitation you actually observed in your run.
 3. Propose one change you would test next and explain what you would check.
 
-Use your actual results and explain what you understood. No sample personal
-answer has been provided.
+Use your actual results and explain what you understood. This instruction sheet
+does not independently certify the originality of the reflection file.
 
 ## Save your work
 

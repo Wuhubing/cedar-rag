@@ -1,20 +1,23 @@
 # Participants
 
-The author confirmed that this assignment was completed individually.
+The author reported that this assignment was completed individually.
 
-- Work mode: **Individual**
+- Work mode: **Individual (reported by the author)**
 - Participant 1: **Wuhubing** (authenticated GitHub account and configured Git author identity)
 - Participant 2: **Not applicable**
 - Pair director/auditor allocation: **Not applicable**
 - Halfway pair role swap: **Not applicable**
 
-Confirm the course submission name if it differs from the Git/GitHub identity.
+The Git/GitHub identity has been checked; the course submission name has not
+been independently verified.
 Only one individual reflection is required, with no more than 150 words.
-The author supplied a replacement and explicitly identified it as personally
-written. The final version is saved in `reflections/participant-1.txt` (149 words),
+The author supplied replacement text and described it as personally written.
+The selected version is saved in `reflections/participant-1.txt` (149 words),
 with the author identity on the first line. Only a transition and a concluding
 sentence were deleted to meet the word limit; no new prose was added.
 The obsolete draft has been deleted from the current version.
+These records describe the supplied text and editing steps; they are not an
+independent originality assessment.
 The instructions are in [reflections/INSTRUCTIONS.md](reflections/INSTRUCTIONS.md).
 
 ## Output provenance

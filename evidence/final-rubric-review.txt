@@ -49,7 +49,7 @@ files, conversation traces, answer-generation-manifest.json and
 answer-handoff-verification.txt.
 
 4. Reproducibility and explanation — rubric weight 2 points
-Material status: COMPLETE; personally written replacement supplied by the author.
+File status: PRESENT; originality and personal understanding are not independently verified.
 - README documents setup, run/verification commands, model/package versions,
   source preparation, code operations, results and limitations.
 - All 41 installed dependency versions match requirements.txt; the existing
@@ -58,7 +58,7 @@ Material status: COMPLETE; personally written replacement supplied by the author
   including six keyword tests and the comparison/audit/handoff checks.
 - At this final review, all six keyword tests, full-vector numeric checks and
   saved-answer handoff checks passed again.
-- Individual work and the Wuhubing Git/GitHub author identity are recorded;
+- The author's report of individual work and the Wuhubing Git/GitHub identity are recorded;
   partner and pair-role fields are not applicable.
 - reflections/participant-1.txt is present, 149 words excluding its author line,
   and covers the workflow, an observed failure, and a proposed next test.
@@ -84,11 +84,14 @@ Cleanup and submission state
   final commit ID in this report.
 - Existing environment/model cache were reused; no fresh-machine reinstall was
   performed or claimed.
-- The course signup form has not been submitted; its URL was not provided.
+- The author has since reported submitting the repository link to the course
+  signup form. The form and its receipt were not independently inspected.
 
 Conclusion
-The public repository has all required submission materials, including the
-personally written replacement supplied by the author. It is ready to submit;
-confirm the course submission name if different from Wuhubing and submit the
-repository link through the course form. No guaranteed numeric grade is assigned.
+No required technical artifact was found missing. The selected reflection is
+present and within the word limit; its authorship is recorded from the author's
+statement, not independently established. File checks cannot establish personal
+understanding, course-name correspondence, a form receipt or full compliance with
+all human-work requirements. The author reports the form submission is complete.
+This report does not certify full compliance or assign a guaranteed grade.
 Submit repository URL: https://github.com/Wuhubing/cedar-rag

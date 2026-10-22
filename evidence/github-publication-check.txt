@@ -39,8 +39,11 @@ Latest reflection update (2026-10-22 client date):
 - The author later requested removal of the obsolete draft; it is deleted from
   the current version. The final file retains the author's approved reflection.
 
-Remaining before course submission:
-1. Confirm the course submission name if it differs from the Git/GitHub identity.
-2. Submit https://github.com/Wuhubing/cedar-rag in the course signup sheet.
-The signup-sheet URL was not supplied; this verification does not claim that the
-course form has been submitted.
+Course submission status update:
+- The author reported submitting https://github.com/Wuhubing/cedar-rag through
+  the course signup sheet.
+- The form and its receipt were not independently inspected. A missing form URL
+  does not establish that the author has not submitted it.
+- The Git/GitHub identity was checked; course-name correspondence was not.
+- Public repository/file verification does not independently establish reflection
+  originality, understanding of the code, or full compliance with every course rule.

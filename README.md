@@ -4,35 +4,36 @@ A teaching RAG workflow for the fictional Cedar Lab: prepare six source passages
 compare keyword and real embedding retrieval, and hand selected evidence to fresh
 answer conversations for cited answers and claim audits.
 
-The technical work is complete, and the author has confirmed **individual work**.
-The project author identity is **Wuhubing** (GitHub/Git identity). The author has
-approved and finalized the individual reflection. The course signup-sheet
-submission remains to be completed.
+This repository contains the project code, recorded runs, comparison table,
+answer audits and reflection file. The Git/GitHub identity is **Wuhubing**.
+The author reported **individual work** and subsequently reported submitting the
+repository link through the course signup sheet.
 
 **GitHub repository / link to submit in the course form:**
 [https://github.com/Wuhubing/cedar-rag](https://github.com/Wuhubing/cedar-rag).
 The repository is public, its default branch is `main`, and anonymous access was
 verified with HTTP 200. Publication checks are recorded in
 [evidence/github-publication-check.txt](evidence/github-publication-check.txt).
-The course signup-sheet URL was not supplied, so the form itself has not been
-submitted.
+The course form and its submission receipt were not independently inspected.
+The reported submission is recorded from the author's statement.
 
 ## Participants and personal work
 
-- Author and individual status are recorded in [PARTICIPANTS.md](PARTICIPANTS.md).
-  Confirm the course submission name if it differs from the Git/GitHub identity.
-- Final individual reflection: **complete**, 149 words, saved as
+- The Git/GitHub identity and the reported individual-work status are recorded in
+  [PARTICIPANTS.md](PARTICIPANTS.md); no separate course-name verification was made.
+- The selected reflection file is present, with a 149-word body:
   [reflections/participant-1.txt](reflections/participant-1.txt).
-- The author supplied a personally written replacement. The final file uses that
-  wording with deletions only to meet the 150-word limit; no new prose was added.
-  The obsolete draft has been removed from this version.
-- There is no partner; pair roles and role swaps are not applicable.
+- The author supplied the replacement text and described it as personally written.
+  Two deletions reduced it from 176 to 149 words; no new prose was added during
+  that replacement. The obsolete AI-assisted draft was removed from this version.
+- The author reported working without a partner; pair roles are not applicable.
 - Existing evidence was generated locally or in the recorded independent answer
   chats. No borrowed pair/instructor output is recorded. Label any later borrowed
   output with its source.
 
-The reflection instructions contain the course's personal-authorship requirement.
-The author has explicitly identified the replacement as personally written.
+The file checks establish presence, length and correspondence to supplied text.
+They do not independently establish originality, understanding of the code or
+an instructor's assessment of the personal-authorship requirement.
 
 ## Environment and setup
 
@@ -308,20 +309,18 @@ It preserved the submitted raw evidence. This verifies commands in the existing
 environment, not a fresh installation on another machine. A cloned checkout can
 be rebuilt using the setup commands and pinned requirements above.
 
-## Before submission
+## Repository checks and reported submission status
 
 - [x] Three verbatim source files, two retrievers, and explanatory run commands.
 - [x] Model/package versions, real CPU vectors, normalization/similarity evidence.
 - [x] Four comparison rows with judgments and the k experiment.
 - [x] Both answer audits, preserved originals, and single instruction revisions.
-- [x] Record individual work and the Git/GitHub author identity in `PARTICIPANTS.md`.
-- [x] Save the author-approved final individual reflection (at most 150 words).
-- [ ] Confirm the course submission name if it differs from the Git/GitHub identity.
-- [ ] Review the Codex-assisted judgments and confirm you can explain the code.
+- [x] Record the reported individual-work status and Git/GitHub identity in `PARTICIPANTS.md`.
+- [x] Save the selected reflection text with a verified 149-word body.
 - [x] Push this project to a same-name public GitHub repository and verify anonymous access.
-- [ ] Submit the repository link through the course signup sheet.
 
-The final reflection uses the author's personally written replacement, shortened
-by deletion to meet the word limit. The obsolete draft has been deleted from the
-current version. The course signup-sheet URL was not supplied and has not been
-guessed.
+The author reported that the repository link was submitted to the course signup
+sheet. This is a reported status, not an independently checked submission receipt.
+The course-name match and the author's ability to explain the code have not been
+independently verified. File completeness is not a guarantee of full compliance
+with every course requirement or a particular grade.
