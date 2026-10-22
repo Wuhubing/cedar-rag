@@ -10,12 +10,11 @@ The author confirmed that this assignment was completed individually.
 
 Confirm the course submission name if it differs from the Git/GitHub identity.
 Only one individual reflection is required, with no more than 150 words.
-The author supplied additional ideas and approved the final reflection with
-AI-assisted editing, now saved in
-`reflections/participant-1.txt` (139 words), with the author identity on the first line.
-The obsolete draft has been deleted from the current version. The handout requires
-a personally written reflection; the author should ensure the final wording meets
-that requirement.
+The author supplied a replacement and explicitly identified it as personally
+written. The final version is saved in `reflections/participant-1.txt` (149 words),
+with the author identity on the first line. Only a transition and a concluding
+sentence were deleted to meet the word limit; no new prose was added.
+The obsolete draft has been deleted from the current version.
 The instructions are in [reflections/INSTRUCTIONS.md](reflections/INSTRUCTIONS.md).
 
 ## Output provenance

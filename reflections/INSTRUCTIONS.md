@@ -6,10 +6,9 @@ This file is an instruction sheet, not a completed reflection.
 
 The project is confirmed as individual work, so only `participant-1.txt` is needed.
 
-Current status: `participant-1.txt` contains the author-approved final reflection
-(139 words), incorporating the author's additional ideas and editorial assistance.
-The obsolete draft has been removed. The final version used AI-assisted editing;
-check the course's personally written reflection requirement before submission.
+Current status: `participant-1.txt` contains the author's personally written
+replacement (149 words). Only deletions were made to meet the word limit;
+no new prose was added. The obsolete draft has been removed.
 
 In your own words, cover all three points:
 

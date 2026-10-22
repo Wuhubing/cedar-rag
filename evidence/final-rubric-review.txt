@@ -49,7 +49,7 @@ files, conversation traces, answer-generation-manifest.json and
 answer-handoff-verification.txt.
 
 4. Reproducibility and explanation — rubric weight 2 points
-Technical material status: COMPLETE; personal-authorship requirement needs author attention.
+Material status: COMPLETE; personally written replacement supplied by the author.
 - README documents setup, run/verification commands, model/package versions,
   source preparation, code operations, results and limitations.
 - All 41 installed dependency versions match requirements.txt; the existing
@@ -60,15 +60,16 @@ Technical material status: COMPLETE; personal-authorship requirement needs autho
   saved-answer handoff checks passed again.
 - Individual work and the Wuhubing Git/GitHub author identity are recorded;
   partner and pair-role fields are not applicable.
-- reflections/participant-1.txt is present, 139 words excluding its author line,
+- reflections/participant-1.txt is present, 149 words excluding its author line,
   and covers the workflow, an observed failure, and a proposed next test.
 - The proposed image-embedding extension is presented as future work, not as
   functionality or source material used in this text-only experiment.
 - The handout says: "Do not ask Codex to write your personal explanation."
-  The current reflection incorporates the author's additional ideas and disclosed
-  AI-assisted editing. Presence, length, and content coverage pass, but these file
-  checks cannot certify compliance with the personally written requirement.
-  For strict compliance, the author should write the final wording personally.
+  The author subsequently supplied a replacement and explicitly identified it
+  as personally written. Only a two-word transition and a 25-word concluding
+  sentence were deleted to meet the word limit; no new prose was added.
+  Presence, length and content coverage pass. The review records the author's
+  direct authorship statement; it does not infer authorship from writing style.
 - The author should also be able to explain the code and judgments in their own
   words; a repository audit cannot establish that understanding.
 
@@ -86,8 +87,8 @@ Cleanup and submission state
 - The course signup form has not been submitted; its URL was not provided.
 
 Conclusion
-The public repository is technically ready to submit. To claim full compliance
-with every written requirement, the author must address the personally written
-reflection requirement and confirm the course submission name if different from
-Wuhubing. No guaranteed numeric grade is assigned by this review.
+The public repository has all required submission materials, including the
+personally written replacement supplied by the author. It is ready to submit;
+confirm the course submission name if different from Wuhubing and submit the
+repository link through the course form. No guaranteed numeric grade is assigned.
 Submit repository URL: https://github.com/Wuhubing/cedar-rag

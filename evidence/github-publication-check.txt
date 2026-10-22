@@ -30,10 +30,12 @@ Authorship status at initial publication (historical):
 - The requested AI-assisted reflection draft is 118 words and labeled as a draft.
 - No final self-written reflection is marked complete.
 
-Reflection finalization update (2026-10-22 client date):
-- The author supplied additional reflection ideas and approved the edited version.
+Latest reflection update (2026-10-22 client date):
+- The author supplied a new replacement and explicitly stated it was personally written.
 - The final individual reflection is saved as reflections/participant-1.txt.
-- The reflection body is 139 words, within the 150-word limit.
+- The supplied replacement was 176 words. A two-word transition and a 25-word
+  concluding sentence were removed, leaving 149 words within the 150-word limit.
+- No new reflection prose was added; the saved wording comes from the author.
 - The author later requested removal of the obsolete draft; it is deleted from
   the current version. The final file retains the author's approved reflection.
 

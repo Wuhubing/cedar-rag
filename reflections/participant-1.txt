@@ -1,7 +1,7 @@
 Wuhubing
 
-This project showed me how RAG separates document preparation, retrieval, and answer generation. Questions and source passages become searchable representations; selected passages then guide a fresh conversation to produce answers with chunk citations.
+This project helped me unpack how RAG decouples document curation, retrieval, and response generation. Queries and source snippets are converted into searchable representations, and the retrieved segments feed into a new chat turn to generate cited responses grounded on individual chunks.
 
-Pure embedding retrieval had a notable limitation: for Q1, k=2 returned A2 and T1, missing A1’s access hours. Increasing k to 3 still missed A1. Q4 also showed that positive similarity does not establish answerability. Semantic overlap identifies related text, but each passage must actually support the requested claim.
+Embedding-only retrieval revealed a clear shortcoming. On Q1, a top‑k of 2 pulled A2 and T1 while overlooking A1’s opening-hour details, and raising k to 3 still failed to surface A1. Q4 further demonstrated that positive similarity alone does not mean a passage can answer the question. Semantic similarity merely signals thematic overlap; every retrieved excerpt must contain factual backing for the claim being made.
 
-Next, I would test hybrid retrieval combining keyword matching and embedding ranking, measuring whether it recovers critical sources without adding excessive irrelevant context. For future collections containing informative diagrams, I would also explore image embeddings and cross-modal retrieval. This would extend the current text-only experiment while still requiring careful verification that retrieved visual evidence supports each answer.
+I plan to evaluate hybrid retrieval that merges keyword matching with embedding ordering. I will check whether this method recovers essential sources without introducing too much extraneous context. For datasets with useful figures, I also want to investigate image embeddings and cross-modal search.

@@ -21,17 +21,18 @@ submitted.
 
 - Author and individual status are recorded in [PARTICIPANTS.md](PARTICIPANTS.md).
   Confirm the course submission name if it differs from the Git/GitHub identity.
-- Final individual reflection: **complete**, 139 words, saved as
+- Final individual reflection: **complete**, 149 words, saved as
   [reflections/participant-1.txt](reflections/participant-1.txt).
-- The author-approved final version incorporates the author's additional ideas
-  and AI-assisted editing. The obsolete draft has been removed from this version.
+- The author supplied a personally written replacement. The final file uses that
+  wording with deletions only to meet the 150-word limit; no new prose was added.
+  The obsolete draft has been removed from this version.
 - There is no partner; pair roles and role swaps are not applicable.
 - Existing evidence was generated locally or in the recorded independent answer
   chats. No borrowed pair/instructor output is recorded. Label any later borrowed
   output with its source.
 
 The reflection instructions contain the course's personal-authorship requirement.
-The final review distinguishes complete technical materials from that requirement.
+The author has explicitly identified the replacement as personally written.
 
 ## Environment and setup
 
@@ -320,8 +321,7 @@ be rebuilt using the setup commands and pinned requirements above.
 - [x] Push this project to a same-name public GitHub repository and verify anonymous access.
 - [ ] Submit the repository link through the course signup sheet.
 
-The final reflection was approved by the author after adding their own ideas and
-AI-assisted editing; the obsolete draft has been deleted from the current version.
-The handout asks for a personally written reflection, so the author should ensure
-the final wording meets that requirement. The course signup-sheet URL was not
-supplied and has not been guessed.
+The final reflection uses the author's personally written replacement, shortened
+by deletion to meet the word limit. The obsolete draft has been deleted from the
+current version. The course signup-sheet URL was not supplied and has not been
+guessed.
