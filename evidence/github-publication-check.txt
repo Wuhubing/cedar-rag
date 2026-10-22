@@ -1,0 +1,38 @@
+GitHub publication verification
+Client date: 2026-10-22 (America/New_York).
+
+Authenticated GitHub account: Wuhubing
+Repository: Wuhubing/cedar-rag
+Repository URL to submit: https://github.com/Wuhubing/cedar-rag
+Visibility: PUBLIC
+Default branch: main
+
+PASS: the GitHub CLI was already authenticated for Wuhubing.
+PASS: the same-name repository did not exist before this run and was created.
+PASS: the initial project commit was pushed to origin/main.
+Verified project commit: ae1c1c1777efb19b98733353ed9b49311ed54103
+PASS: the remote main commit matched that local commit at verification.
+PASS: an unauthenticated HTTPS request returned HTTP 200 for the repository URL.
+PASS: remote Git blobs for the README, author information, pinned requirements,
+      results.csv, three sources, two retrievers, vector inspection, retrieval runs,
+      k experiment, two answer audits and reflection draft matched local files.
+PASS: the remote tree contained all 65 files in the initial project commit.
+PASS: the virtual environment, Python caches and local secret files were excluded.
+
+A documentation follow-up records this verification and is pushed after the
+project commit. The final local/remote HEAD equality is checked after that push;
+its commit ID is available in Git history rather than embedded in this file.
+
+Current authorship status:
+- Individual work confirmed directly by the author.
+- Wuhubing is the authenticated GitHub and configured Git author identity.
+- No partner; paired roles and role swapping are not applicable.
+- The requested AI-assisted reflection draft is 118 words and labeled as a draft.
+- No final self-written reflection is marked complete.
+
+Remaining before course submission:
+1. Revise the draft into your own final reflection (at most 150 words), save it as
+   reflections/participant-1.txt, and confirm the course submission name if needed.
+2. Submit https://github.com/Wuhubing/cedar-rag in the course signup sheet.
+The signup-sheet URL was not supplied; this verification does not claim that the
+course form has been submitted.

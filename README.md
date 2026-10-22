@@ -8,6 +8,14 @@ The technical work is complete, and the author has confirmed **individual work**
 The project author identity is **Wuhubing** (GitHub/Git identity). A final personal
 reflection and the course signup-sheet submission remain to be completed.
 
+**GitHub repository / link to submit in the course form:**
+[https://github.com/Wuhubing/cedar-rag](https://github.com/Wuhubing/cedar-rag).
+The repository is public, its default branch is `main`, and anonymous access was
+verified with HTTP 200. Publication checks are recorded in
+[evidence/github-publication-check.txt](evidence/github-publication-check.txt).
+The course signup-sheet URL was not supplied, so the form itself has not been
+submitted.
+
 ## Participants and personal work
 
 - Author and individual status are recorded in [PARTICIPANTS.md](PARTICIPANTS.md).
@@ -266,7 +274,8 @@ success. This manual handoff is a teaching workflow, not a deployed application.
 | Q4 answer audit | [evidence/q4-answer-audit.txt](evidence/q4-answer-audit.txt) |
 | Original/revised answer provenance | `evidence/answer-generation-manifest.json`, `evidence/q1-answer-*-trace.json`, `evidence/q4-answer-*-trace.json` |
 | Handoff verification | `evidence/answer-handoff-verification.txt` |
-| Final commands/completeness check | `evidence/final-command-checks.txt`, `evidence/submission-check.txt` |
+| Final commands/completeness check | `evidence/final-command-checks.txt`, `evidence/submission-check.txt` (historical Step 7 baseline) |
+| GitHub publication and submission URL | [evidence/github-publication-check.txt](evidence/github-publication-check.txt) |
 
 The `.npz` archives contain all unrounded coordinates, scores, questions, source
 texts and separate IDs/filenames: `embedding-vectors-q1.npz`,
@@ -306,7 +315,7 @@ be rebuilt using the setup commands and pinned requirements above.
 - [x] Record individual work and the Git/GitHub author identity in `PARTICIPANTS.md`.
 - [ ] Confirm the course submission name if different and write the final individual reflection (at most 150 words).
 - [ ] Review the Codex-assisted judgments and confirm you can explain the code.
-- [ ] Push this project to a same-name GitHub repository and check course access.
+- [x] Push this project to a same-name public GitHub repository and verify anonymous access.
 - [ ] Submit the repository link through the course signup sheet.
 
 The AI-assisted reflection draft was provided at the author's explicit request;
