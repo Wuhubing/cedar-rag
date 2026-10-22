@@ -1,0 +1,17 @@
+W1021 16:02:57.446000 54415 .venv/lib/python3.13/site-packages/torch/distributed/elastic/multiprocessing/redirects.py:35] NOTE: Redirects are currently not supported in MacOs.
+Python: 3.13.2
+Python executable: /Users/ww/Desktop/26f/software/cedar-rag/.venv/bin/python
+sentence-transformers: 6.2.0
+numpy: 2.5.4
+torch: 2.14.1
+transformers: 5.20.2
+huggingface-hub: 2.2.0
+Model: sentence-transformers/all-MiniLM-L6-v2
+Loading model on CPU...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|██████████| 103/103 [00:00<00:00, 56435.44it/s]
+Device: cpu
+Embedding shape: (384,)
+Embedding length: 1.00000000
+encode_document / encode_query: available
+PASS: model loaded and a real normalized 384-dimensional vector was produced on CPU.

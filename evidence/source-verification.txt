@@ -1,0 +1,13 @@
+Source verification against the user-provided assignment attachment.
+Verification only: no keyword or embedding retrieval was run.
+
+PASS: access.txt [A1] matches the original passage exactly.
+PASS: access.txt [A2] matches the original passage exactly.
+PASS: training.txt [T1] matches the original passage exactly.
+PASS: training.txt [T2] matches the original passage exactly.
+PASS: booking.txt [B1] matches the original passage exactly.
+PASS: booking.txt [B2] matches the original passage exactly.
+
+PASS: exactly three document files and six unique paragraph chunks.
+PASS: Q1 pre-retrieval prediction records A1 and A2.
+Paragraph separators: one blank line; original paragraph text and labels preserved.

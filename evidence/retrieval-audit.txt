@@ -1,0 +1,34 @@
+Task 3 retrieval audit (Codex-assisted, after recording actual rankings)
+Raw rankings: retrieval-runs.txt; blank judgments: results-unreviewed.csv.
+PASS: four actual queries, six source vectors, CPU run, normalized full vectors.
+PASS: all embedding rankings and printed scores independently reconstructed from saved vectors.
+Judgment convention: true = all required evidence is present; false = incomplete or absent.
+For Q4, required_ids=absent, both judgments=false, and coverage=N/A (no answer in corpus).
+
+Q1: May a trained graduate student operate the laser alone at 19:00?
+Keyword selects A1 (3), A2 (2). Required evidence coverage 2/2; missing none. Embedding selects A2 (0.68644575), T1 (0.58195294). Required evidence coverage 1/2; missing A1. A1 embedding rank is 4 (0.37424892). T1 does not supply access hours.
+  keyword: evidence_complete=true; coverage=2/2; missing=none.
+  embedding: evidence_complete=false; coverage=1/2; missing=A1.
+
+Q2: Can I use the laser without another person present?
+Keyword selects A2 (2), B1 (1). Required evidence coverage 1/1; missing none. Embedding selects A2 (0.58519334), T1 (0.43476067). Required evidence coverage 1/1; missing none. A2 shared keyword words: laser, present. The paraphrase is judged by whether its required passage is selected.
+  keyword: evidence_complete=true; coverage=1/1; missing=none.
+  embedding: evidence_complete=true; coverage=1/1; missing=none.
+
+Q3: How frequently must I refresh my laser qualification?
+Keyword selects T1 (2), A2 (1). Required evidence coverage 1/1; missing none. Embedding selects T1 (0.74202748), B1 (0.47119536). Required evidence coverage 1/1; missing none. T1 shared keyword words: laser, must. The paraphrase is judged by whether its required passage is selected.
+  keyword: evidence_complete=true; coverage=1/1; missing=none.
+  embedding: evidence_complete=true; coverage=1/1; missing=none.
+
+Q4: What is the laser wavelength?
+Keyword selects A2 (1), B1 (1). Embedding selects T1 (0.34772135), A2 (0.32082712). Wavelength is absent from all six sources. Both completeness fields are false. Nearest passages and positive scores do not establish answerability. Coverage ratio is not applicable.
+  keyword: evidence_complete=false; coverage=N/A; missing wavelength information.
+  embedding: evidence_complete=false; coverage=N/A; missing wavelength information.
+
+Q4 missing-information check: inspected all six original passages.
+A1 covers access hours; A2 covers two-person operation; T1 covers training renewal;
+T2 covers visitors; B1 covers bookings; B2 covers cancellation. None specifies a wavelength.
+Embedding retrieval returns the top k relative similarities even when the corpus cannot answer.
+Keyword retrieval also returns laser-related passages for Q4 because of literal overlap.
+Neither method's positive score establishes the presence of wavelength evidence.
+No generated answers or personal reflections are included.

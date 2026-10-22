@@ -1,0 +1,15 @@
+Answer handoff and conversation provenance verification
+
+PASS: Q1 original input is exactly its question, selected A2, T1, and assignment prompt.
+PASS: Q1 original: distinct fresh chat outside the project; exact input delivered; response preserved verbatim; no answer-initiated tool calls in trace.
+PASS: Q1 revised: distinct fresh chat outside the project; exact input delivered; response preserved verbatim; no answer-initiated tool calls in trace.
+PASS: Q1 audit contains both actual answers, claim checks, missing-information review, and retry outcome.
+PASS: Q4 original input is exactly its question, selected T1, A2, and assignment prompt.
+PASS: Q4 original: distinct fresh chat outside the project; exact input delivered; response preserved verbatim; no answer-initiated tool calls in trace.
+PASS: Q4 revised: distinct fresh chat outside the project; exact input delivered; response preserved verbatim; no answer-initiated tool calls in trace.
+PASS: Q4 audit contains both actual answers, claim checks, missing-information review, and retry outcome.
+
+PASS: exactly two original attempts and one instruction revision per question; all four chats are distinct.
+PASS: retries retain the same questions, two source passages, and passage order.
+PASS: A1, T2, B1 and B2 were not supplied as answer evidence; no unselected IDs were cited.
+Scope: these checks verify saved inputs, traces and outputs. Semantic support judgments are recorded separately in each answer audit.

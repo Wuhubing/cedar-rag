@@ -1,0 +1,7 @@
+No. The student may not operate the laser alone at 19:00: two trained people must be present whenever the laser operates, including during general laboratory access hours. [A2] The operator must also have a current training record, with training renewed every 12 months; the question does not establish whether the student’s training is current. [T1]
+
+Claim support:
+- Solo operation at 19:00 is prohibited — [A2].
+- Two trained people must be present whenever the laser operates — [A2].
+- Operators need a current training record and renewal every 12 months — [T1].
+- This student’s training is current — unsupported by the supplied information.

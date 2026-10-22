@@ -1,0 +1,182 @@
+Actual Q1 embedding runs with k=1 and k=3.
+The question, model, corpus, normalization and scoring rule are unchanged.
+
+=== Q1: embeddings k=1 ===
+Command: /Users/ww/Desktop/26f/software/cedar-rag/.venv/bin/python /Users/ww/Desktop/26f/software/cedar-rag/embedding_retriever.py 'May a trained graduate student operate the laser alone at 19:00?' --k 1 --save-vectors evidence/embedding-vectors-q1-k1.npz
+Model: sentence-transformers/all-MiniLM-L6-v2
+Python: 3.13.2
+sentence-transformers: 6.2.0
+numpy: 2.5.4
+torch: 2.14.1
+transformers: 5.20.2
+huggingface-hub: 2.2.0
+Loading model on CPU...
+Device: cpu
+Model output dtype: float32; calculation dtype: float64
+Document matrix shape: (6, 384)
+Document encoding calls: 1; this same matrix is reused across questions.
+Normalization requested for documents and questions: normalize_embeddings=True
+All 384 coordinates are used in retrieval, not just the displayed first 12.
+Only passage text is encoded; IDs and filenames remain separate metadata.
+Displayed coordinates are rounded to four decimals; calculations use unrounded coordinates.
+Individual coordinates have no assigned semantic names.
+
+Document vectors (first 12 coordinates):
+A1 (access.txt): [-0.0039, 0.0188, 0.0218, -0.0179, -0.0058, -0.0612, -0.0891, 0.0321, -0.0584, 0.0111, 0.0031, -0.0123]
+  Length: 1.0000000271; approximately 1: PASS
+A2 (access.txt): [0.0298, -0.0435, -0.0289, 0.0303, -0.0507, -0.0310, 0.0361, -0.0391, -0.0322, -0.0424, 0.0498, 0.0019]
+  Length: 1.0000000853; approximately 1: PASS
+T1 (training.txt): [0.0063, -0.0708, 0.0345, 0.0146, -0.1167, -0.0114, -0.0708, -0.0761, -0.0806, -0.0767, 0.0325, 0.1357]
+  Length: 0.9999999942; approximately 1: PASS
+T2 (training.txt): [0.0447, -0.0044, 0.0042, -0.0058, 0.0211, -0.0151, -0.0108, -0.0301, -0.0191, -0.0234, 0.0280, -0.0367]
+  Length: 1.0000000849; approximately 1: PASS
+B1 (booking.txt): [0.0856, -0.0417, -0.0194, 0.0377, -0.0668, -0.0053, -0.0260, -0.0618, -0.0186, -0.0023, -0.0050, 0.0659]
+  Length: 1.0000000167; approximately 1: PASS
+B2 (booking.txt): [0.0673, 0.0924, -0.0079, 0.0634, -0.0105, 0.0043, -0.0020, -0.0750, 0.0667, 0.0378, -0.0040, 0.0335]
+  Length: 1.0000000524; approximately 1: PASS
+
+Question 1: May a trained graduate student operate the laser alone at 19:00?
+Query vector shape: (384,)
+Query first 12 coordinates: [0.0485, 0.0060, -0.0148, -0.0017, -0.0642, -0.0427, 0.0008, -0.0575, -0.0771, -0.0306, 0.0749, 0.0967]
+Query length: 1.0000000392; approximately 1: PASS
+k: 1; always select the top k available passages; no relevance threshold.
+
+All scores (descending score, then ascending chunk ID):
+Rank	ID	Filename	Dot product	Direct cosine
+1	A2	access.txt	0.68644575	0.68644566
+2	T1	training.txt	0.58195294	0.58195292
+3	B1	booking.txt	0.53269621	0.53269618
+4	A1	access.txt	0.37424892	0.37424890
+5	T2	training.txt	0.27045221	0.27045217
+6	B2	booking.txt	0.12873971	0.12873970
+All six dot/cosine comparisons: PASS (absolute tolerance 1e-06)
+Selected IDs: A2
+
+ID: A2
+Filename: access.txt
+Score: 0.68644575
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+Coordinate products for the top passage A2 (1-based coordinates):
+Coordinate	Query (4 d.p.)	Document (4 d.p.)	Product (unrounded inputs)
+1	0.0485	0.0298	0.0014475211
+2	0.0060	-0.0435	-0.0002631060
+3	-0.0148	-0.0289	0.0004261923
+4	-0.0017	0.0303	-0.0000504139
+5	-0.0642	-0.0507	0.0032577505
+6	-0.0427	-0.0310	0.0013239657
+7	0.0008	0.0361	0.0000280458
+8	-0.0575	-0.0391	0.0022502848
+9	-0.0771	-0.0322	0.0024829712
+10	-0.0306	-0.0424	0.0012972566
+11	0.0749	0.0498	0.0037300771
+12	0.0967	0.0019	0.0001809546
+First 12 products subtotal: 0.0161114999
+Remaining 372 products subtotal: 0.6703342467
+Full 384-coordinate dot product: 0.6864457465
+Cosine calculated directly from vector lengths: 0.6864456610
+Absolute dot/cosine difference: 8.54938960737e-08
+Subtotal reconstruction: PASS (absolute tolerance 1e-12)
+
+Extrema among displayed coordinates (not across all 384 coordinates):
+Smallest: -0.1167 (T1, coordinate 5)
+Largest: 0.1357 (T1, coordinate 12)
+Neither extreme alone explains a passage; similarity uses the whole vector.
+
+Saved full unrounded vectors and scores: evidence/embedding-vectors-q1-k1.npz
+Retrieval inspection only; no answer generated.
+
+=== Q1: embeddings k=3 ===
+Command: /Users/ww/Desktop/26f/software/cedar-rag/.venv/bin/python /Users/ww/Desktop/26f/software/cedar-rag/embedding_retriever.py 'May a trained graduate student operate the laser alone at 19:00?' --k 3 --save-vectors evidence/embedding-vectors-q1-k3.npz
+Model: sentence-transformers/all-MiniLM-L6-v2
+Python: 3.13.2
+sentence-transformers: 6.2.0
+numpy: 2.5.4
+torch: 2.14.1
+transformers: 5.20.2
+huggingface-hub: 2.2.0
+Loading model on CPU...
+Device: cpu
+Model output dtype: float32; calculation dtype: float64
+Document matrix shape: (6, 384)
+Document encoding calls: 1; this same matrix is reused across questions.
+Normalization requested for documents and questions: normalize_embeddings=True
+All 384 coordinates are used in retrieval, not just the displayed first 12.
+Only passage text is encoded; IDs and filenames remain separate metadata.
+Displayed coordinates are rounded to four decimals; calculations use unrounded coordinates.
+Individual coordinates have no assigned semantic names.
+
+Document vectors (first 12 coordinates):
+A1 (access.txt): [-0.0039, 0.0188, 0.0218, -0.0179, -0.0058, -0.0612, -0.0891, 0.0321, -0.0584, 0.0111, 0.0031, -0.0123]
+  Length: 1.0000000271; approximately 1: PASS
+A2 (access.txt): [0.0298, -0.0435, -0.0289, 0.0303, -0.0507, -0.0310, 0.0361, -0.0391, -0.0322, -0.0424, 0.0498, 0.0019]
+  Length: 1.0000000853; approximately 1: PASS
+T1 (training.txt): [0.0063, -0.0708, 0.0345, 0.0146, -0.1167, -0.0114, -0.0708, -0.0761, -0.0806, -0.0767, 0.0325, 0.1357]
+  Length: 0.9999999942; approximately 1: PASS
+T2 (training.txt): [0.0447, -0.0044, 0.0042, -0.0058, 0.0211, -0.0151, -0.0108, -0.0301, -0.0191, -0.0234, 0.0280, -0.0367]
+  Length: 1.0000000849; approximately 1: PASS
+B1 (booking.txt): [0.0856, -0.0417, -0.0194, 0.0377, -0.0668, -0.0053, -0.0260, -0.0618, -0.0186, -0.0023, -0.0050, 0.0659]
+  Length: 1.0000000167; approximately 1: PASS
+B2 (booking.txt): [0.0673, 0.0924, -0.0079, 0.0634, -0.0105, 0.0043, -0.0020, -0.0750, 0.0667, 0.0378, -0.0040, 0.0335]
+  Length: 1.0000000524; approximately 1: PASS
+
+Question 1: May a trained graduate student operate the laser alone at 19:00?
+Query vector shape: (384,)
+Query first 12 coordinates: [0.0485, 0.0060, -0.0148, -0.0017, -0.0642, -0.0427, 0.0008, -0.0575, -0.0771, -0.0306, 0.0749, 0.0967]
+Query length: 1.0000000392; approximately 1: PASS
+k: 3; always select the top k available passages; no relevance threshold.
+
+All scores (descending score, then ascending chunk ID):
+Rank	ID	Filename	Dot product	Direct cosine
+1	A2	access.txt	0.68644575	0.68644566
+2	T1	training.txt	0.58195294	0.58195292
+3	B1	booking.txt	0.53269621	0.53269618
+4	A1	access.txt	0.37424892	0.37424890
+5	T2	training.txt	0.27045221	0.27045217
+6	B2	booking.txt	0.12873971	0.12873970
+All six dot/cosine comparisons: PASS (absolute tolerance 1e-06)
+Selected IDs: A2, T1, B1
+
+ID: A2
+Filename: access.txt
+Score: 0.68644575
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+ID: T1
+Filename: training.txt
+Score: 0.58195294
+Text: Laser training must be renewed every 12 months. A current training record is required before operating the laser.
+
+ID: B1
+Filename: booking.txt
+Score: 0.53269621
+Text: Laser room bookings are limited to two hours per session. Reserve the room through the equipment calendar.
+
+Coordinate products for the top passage A2 (1-based coordinates):
+Coordinate	Query (4 d.p.)	Document (4 d.p.)	Product (unrounded inputs)
+1	0.0485	0.0298	0.0014475211
+2	0.0060	-0.0435	-0.0002631060
+3	-0.0148	-0.0289	0.0004261923
+4	-0.0017	0.0303	-0.0000504139
+5	-0.0642	-0.0507	0.0032577505
+6	-0.0427	-0.0310	0.0013239657
+7	0.0008	0.0361	0.0000280458
+8	-0.0575	-0.0391	0.0022502848
+9	-0.0771	-0.0322	0.0024829712
+10	-0.0306	-0.0424	0.0012972566
+11	0.0749	0.0498	0.0037300771
+12	0.0967	0.0019	0.0001809546
+First 12 products subtotal: 0.0161114999
+Remaining 372 products subtotal: 0.6703342467
+Full 384-coordinate dot product: 0.6864457465
+Cosine calculated directly from vector lengths: 0.6864456610
+Absolute dot/cosine difference: 8.54938960737e-08
+Subtotal reconstruction: PASS (absolute tolerance 1e-12)
+
+Extrema among displayed coordinates (not across all 384 coordinates):
+Smallest: -0.1167 (T1, coordinate 5)
+Largest: 0.1357 (T1, coordinate 12)
+Neither extreme alone explains a passage; similarity uses the whole vector.
+
+Saved full unrounded vectors and scores: evidence/embedding-vectors-q1-k3.npz
+Retrieval inspection only; no answer generated.

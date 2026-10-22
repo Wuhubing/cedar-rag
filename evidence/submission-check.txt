@@ -1,0 +1,34 @@
+Historical Step 7 technical-check baseline.
+This report predates the author's later confirmation of individual work, requested AI-assisted reflection draft, and GitHub publication.
+See PARTICIPANTS.md, README.md and evidence/github-publication-check.txt for the current submission state.
+
+Cedar RAG submission-material review
+Review date: 2026-10-22 (America/New_York, client date).
+Technical materials: checked. Personal and external submission steps: pending.
+
+PASS: all 37 required/check-support files exist and are nonempty.
+PASS: exactly three source files and six unique paragraphs match the assignment verbatim.
+PASS: all 41 dependency pins match the installed virtual environment.
+PASS: pip check: No broken requirements found.
+PASS: actual final CPU model load/encoding succeeded; shape (384,), length approximately 1.
+PASS: README model/package version table matches actual versions; local Markdown links resolve.
+PASS: results.csv has exactly nine required columns, four questions, aligned scores and filled audit fields.
+PASS: Q1 embedding evidence remains partial; Q4 is absent rather than counted as successful retrieval.
+PASS: original unreviewed CSV is preserved with blank judgment columns.
+PASS: two original answer attempts plus one revision per question retain four distinct chat records and all raw inputs/outputs.
+PASS: seven documented commands succeeded in a disposable project copy, including all six keyword tests.
+PASS: comparison/audit and handoff commands reproduced identical final results.csv and Q1/Q4 answer-input files.
+Verification scope: existing virtual environment/model cache reused; no fresh-environment reinstall was performed.
+PASS: Git repository initialized; .venv is excluded from version control.
+Git remotes: none configured; GitHub push remains pending.
+
+PENDING — complete these yourself:
+1. Work mode (individual/pair), your full name, and partner name if paired: PARTICIPANTS.md.
+2. If paired, initial director/auditor roles and halfway role swap; otherwise mark Not applicable.
+3. One self-written reflection per participant, at most 150 words, following reflections/INSTRUCTIONS.md.
+   Cover question-to-cited-answer flow, one observed failure/limitation, and one next change to test.
+4. Read the Codex-assisted judgments and confirm you can explain the workflow/code.
+5. Push to a same-name GitHub repository, verify course access, and submit its URL through the course signup sheet.
+
+No participant identities, personal reflections or course submission URLs were invented.
+Existing raw retrieval runs and answer transcripts were preserved during these final checks.

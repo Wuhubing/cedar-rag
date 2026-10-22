@@ -1,0 +1,13 @@
+No. A graduate student may not operate the laser alone at 19:00: two trained people must be present whenever the laser operates, including during general laboratory access hours. [A2]
+
+Training must be renewed every 12 months, and a current training record is required before operation. Calling the student “trained” does not establish that their record is current. [T1]
+
+Separately, the passages do not specify general laboratory access hours, so they do not establish whether 19:00 is within permitted access hours.
+
+Claim check:
+
+- Two trained people must be present during laser operation, including during general access hours — [A2].
+- Solo operation at 19:00 is prohibited — [A2].
+- Training renewal is required every 12 months, with a current record before operation — [T1].
+- This student has a current training record — unsupported.
+- 19:00 falls within permitted access hours — unsupported; access hours are not supplied.

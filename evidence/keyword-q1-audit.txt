@@ -1,0 +1,56 @@
+Q1 keyword retrieval audit (Codex-assisted; no answer generated)
+
+Question:
+May a trained graduate student operate the laser alone at 19:00?
+
+Run command (from the project directory):
+.venv/bin/python keyword_retriever.py 'May a trained graduate student operate the laser alone at 19:00?'
+
+Actual stdout: evidence/keyword-q1.txt
+Parameters: k = 2 (default)
+
+Rule check:
+- Lowercase question and paragraph text.
+- Extract alphanumeric words using [a-z0-9]+.
+- Remove exactly: a, an, the, is, are, to, of, in, at, for, and, or, may, can, i, it, be.
+- Use sets so repeated words count only once.
+- Exclude chunk IDs and filenames from search text.
+- Rank by descending score and ascending chunk ID for ties.
+- Select at most k chunks, all with positive scores.
+
+Query words after preprocessing:
+00, 19, alone, graduate, laser, operate, student, trained
+
+Direct shared-word count (checked against the source paragraphs):
+Rank  ID  Shared distinct words       Score
+1     A1  00, graduate, trained       3
+2     A2  laser, trained             2
+3     B1  laser                      1
+4     T1  laser                      1
+5     T2  trained                    1
+6     B2  (none)                     0
+
+Worked count for A1:
+The word "trained" contributes 1, "graduate" contributes 1, and "00"
+contributes 1: total 3. A1 contains both 08:00 and 22:00, but the repeated
+"00" contributes only once. The query's "student" does not match the
+source's "students" because stemming is forbidden. The "19" is absent
+from A1. This retriever does not reason about whether a time falls in an interval.
+
+Worked count for A2:
+Only "laser" and "trained" match: total 2. Although "laser" appears twice
+in the paragraph, it contributes only once. "operate" does not match
+"operating" because stemming is forbidden.
+
+Tie check:
+B1, T1, and T2 all score 1, so their order is B1, T1, T2.
+
+Evidence completeness:
+Selected IDs in rank order: A1, A2
+Selected filenames: access.txt, access.txt
+Predicted required IDs: A1, A2 (see q1-pre-run-prediction.txt)
+Both the general access rule and the laser operating rule were retrieved.
+Required evidence coverage: 2/2 = 1.0 (complete).
+The complete selected paragraph text is preserved in keyword-q1.txt.
+
+This file audits retrieval only. No final answer to Q1 is generated at this stage.

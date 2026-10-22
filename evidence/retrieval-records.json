@@ -1,0 +1,527 @@
+{
+  "Q1": {
+    "question": "May a trained graduate student operate the laser alone at 19:00?",
+    "required_ids": [
+      "A1",
+      "A2"
+    ],
+    "keyword_ranking": [
+      {
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 3,
+        "matched_words": [
+          "00",
+          "graduate",
+          "trained"
+        ]
+      },
+      {
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 2,
+        "matched_words": [
+          "laser",
+          "trained"
+        ]
+      },
+      {
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 1,
+        "matched_words": [
+          "trained"
+        ]
+      },
+      {
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0,
+        "matched_words": []
+      }
+    ],
+    "keyword_selected": [
+      {
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 3,
+        "matched_words": [
+          "00",
+          "graduate",
+          "trained"
+        ]
+      },
+      {
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 2,
+        "matched_words": [
+          "laser",
+          "trained"
+        ]
+      }
+    ],
+    "embedding_ranking": [
+      {
+        "rank": 1,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.68644575,
+        "cosine": 0.68644566
+      },
+      {
+        "rank": 2,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.58195294,
+        "cosine": 0.58195292
+      },
+      {
+        "rank": 3,
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 0.53269621,
+        "cosine": 0.53269618
+      },
+      {
+        "rank": 4,
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0.37424892,
+        "cosine": 0.3742489
+      },
+      {
+        "rank": 5,
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 0.27045221,
+        "cosine": 0.27045217
+      },
+      {
+        "rank": 6,
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0.12873971,
+        "cosine": 0.1287397
+      }
+    ],
+    "embedding_selected": [
+      {
+        "rank": 1,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.68644575,
+        "cosine": 0.68644566
+      },
+      {
+        "rank": 2,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.58195294,
+        "cosine": 0.58195292
+      }
+    ]
+  },
+  "Q2": {
+    "question": "Can I use the laser without another person present?",
+    "required_ids": [
+      "A2"
+    ],
+    "keyword_ranking": [
+      {
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 2,
+        "matched_words": [
+          "laser",
+          "present"
+        ]
+      },
+      {
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0,
+        "matched_words": []
+      },
+      {
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0,
+        "matched_words": []
+      },
+      {
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 0,
+        "matched_words": []
+      }
+    ],
+    "keyword_selected": [
+      {
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 2,
+        "matched_words": [
+          "laser",
+          "present"
+        ]
+      },
+      {
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      }
+    ],
+    "embedding_ranking": [
+      {
+        "rank": 1,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.58519334,
+        "cosine": 0.5851933
+      },
+      {
+        "rank": 2,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.43476067,
+        "cosine": 0.43476068
+      },
+      {
+        "rank": 3,
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 0.42535616,
+        "cosine": 0.42535616
+      },
+      {
+        "rank": 4,
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 0.19075387,
+        "cosine": 0.19075386
+      },
+      {
+        "rank": 5,
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0.05762303,
+        "cosine": 0.05762302
+      },
+      {
+        "rank": 6,
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0.03563603,
+        "cosine": 0.03563603
+      }
+    ],
+    "embedding_selected": [
+      {
+        "rank": 1,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.58519334,
+        "cosine": 0.5851933
+      },
+      {
+        "rank": 2,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.43476067,
+        "cosine": 0.43476068
+      }
+    ]
+  },
+  "Q3": {
+    "question": "How frequently must I refresh my laser qualification?",
+    "required_ids": [
+      "T1"
+    ],
+    "keyword_ranking": [
+      {
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 2,
+        "matched_words": [
+          "laser",
+          "must"
+        ]
+      },
+      {
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0,
+        "matched_words": []
+      },
+      {
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0,
+        "matched_words": []
+      },
+      {
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 0,
+        "matched_words": []
+      }
+    ],
+    "keyword_selected": [
+      {
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 2,
+        "matched_words": [
+          "laser",
+          "must"
+        ]
+      },
+      {
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      }
+    ],
+    "embedding_ranking": [
+      {
+        "rank": 1,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.74202748,
+        "cosine": 0.74202746
+      },
+      {
+        "rank": 2,
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 0.47119536,
+        "cosine": 0.47119534
+      },
+      {
+        "rank": 3,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.44925738,
+        "cosine": 0.44925733
+      },
+      {
+        "rank": 4,
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0.23632715,
+        "cosine": 0.23632714
+      },
+      {
+        "rank": 5,
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0.14731016,
+        "cosine": 0.14731015
+      },
+      {
+        "rank": 6,
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 0.04095162,
+        "cosine": 0.04095161
+      }
+    ],
+    "embedding_selected": [
+      {
+        "rank": 1,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.74202748,
+        "cosine": 0.74202746
+      },
+      {
+        "rank": 2,
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 0.47119536,
+        "cosine": 0.47119534
+      }
+    ]
+  },
+  "Q4": {
+    "question": "What is the laser wavelength?",
+    "required_ids": "absent",
+    "keyword_ranking": [
+      {
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0,
+        "matched_words": []
+      },
+      {
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0,
+        "matched_words": []
+      },
+      {
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 0,
+        "matched_words": []
+      }
+    ],
+    "keyword_selected": [
+      {
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      },
+      {
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 1,
+        "matched_words": [
+          "laser"
+        ]
+      }
+    ],
+    "embedding_ranking": [
+      {
+        "rank": 1,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.34772135,
+        "cosine": 0.34772138
+      },
+      {
+        "rank": 2,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.32082712,
+        "cosine": 0.32082711
+      },
+      {
+        "rank": 3,
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 0.31150098,
+        "cosine": 0.31150099
+      },
+      {
+        "rank": 4,
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0.05795069,
+        "cosine": 0.05795069
+      },
+      {
+        "rank": 5,
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": -0.04349698,
+        "cosine": -0.04349698
+      },
+      {
+        "rank": 6,
+        "id": "T2",
+        "filename": "training.txt",
+        "score": -0.05448818,
+        "cosine": -0.05448817
+      }
+    ],
+    "embedding_selected": [
+      {
+        "rank": 1,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.34772135,
+        "cosine": 0.34772138
+      },
+      {
+        "rank": 2,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.32082712,
+        "cosine": 0.32082711
+      }
+    ]
+  }
+}

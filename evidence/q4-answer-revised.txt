@@ -1,0 +1,5 @@
+The supplied passages do not specify the laser wavelength; a wavelength value is missing. [T1] [A2]
+
+Claim audit:
+- No wavelength is specified in the supplied passages: [T1], [A2] (inspected passages).
+- Any actual wavelength value: **unsupported**.

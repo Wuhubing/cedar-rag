@@ -1,0 +1,7 @@
+PASS: all six source paragraphs still match the original assignment exactly.
+PASS: keyword baseline implementation is unchanged.
+PASS: final CSV has the exact nine columns and four rows; all values match the audited records.
+PASS: original IDs, scores and required targets remain identical to the unreviewed CSV.
+PASS: the unreviewed CSV retains blank judgments; final judgments cover Q1-Q4 and mark Q4 absent.
+PASS: direct shared-word checks agree for the selected/intended passages in every question.
+PASS: new Python files compile.

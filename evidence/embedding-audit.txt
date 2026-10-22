@@ -1,0 +1,36 @@
+Independent audit of the actual saved Q1 embedding run
+Method: scalar coordinate products and math.fsum; no model rerun or fabricated vectors.
+PASS: archive metadata matches the six complete source texts; labels and filenames are separate.
+PASS: document matrix (6, 384), question matrix (1, 384), score matrix (1, 6).
+PASS: all full vectors are finite and retain the unrounded float32 model coordinates.
+PASS: transcript records CPU execution.
+PASS: A1 vector length = 1.0000000271 (within 1e-6 of 1).
+PASS: A2 vector length = 1.0000000853 (within 1e-6 of 1).
+PASS: T1 vector length = 0.9999999942 (within 1e-6 of 1).
+PASS: T2 vector length = 1.0000000849 (within 1e-6 of 1).
+PASS: B1 vector length = 1.0000000167 (within 1e-6 of 1).
+PASS: B2 vector length = 1.0000000524 (within 1e-6 of 1).
+PASS: Q1 vector length = 1.0000000392 (within 1e-6 of 1).
+PASS: all six saved dot scores agree with independent scalar sums within 1e-12.
+PASS: all six dot scores agree with direct cosine within 1e-6.
+PASS: the transcript's complete ranking and scores match the saved vectors.
+Top passage: A2
+First 12 products subtotal: 0.0161114999
+Remaining 372 products subtotal: 0.6703342467
+Full similarity: 0.6864457465
+Direct cosine: 0.6864456610
+Absolute difference: 8.54938960737e-08
+PASS: the two subtotals reconstruct the full dot score within 1e-12.
+Selected IDs (k=2): A2, T1
+Q1 required IDs: A1, A2
+Required evidence coverage: 1/2 = 0.5
+Missing required IDs: A1
+Evidence completeness: partial
+A2 supplies the operating condition; A1's numeric access hours are missing from the selected set.
+T1 supplies training requirements; it does not replace A1's access-hour evidence.
+Keyword Q1 selected A1, A2; embeddings at k=2 did not improve required evidence coverage in this run.
+Similarity scores and keyword overlap counts use different scales and must not be compared numerically.
+Smallest displayed coordinate: -0.1167 (T1, coordinate 5).
+Largest displayed coordinate: 0.1357 (T1, coordinate 12).
+Coordinates have no reliable individual semantic names; the vector as a whole represents text relationships.
+This is a retrieval audit, not a generated answer or a personal reflection.

@@ -1,0 +1,11 @@
+test_cli_k_argument (test_keyword_retriever.KeywordTests.test_cli_k_argument) ... ok
+test_cli_no_matches (test_keyword_retriever.KeywordTests.test_cli_no_matches) ... ok
+test_exact_stopwords_and_no_stemming (test_keyword_retriever.KeywordTests.test_exact_stopwords_and_no_stemming) ... ok
+test_q1_scores_and_tiebreaking (test_keyword_retriever.KeywordTests.test_q1_scores_and_tiebreaking) ... ok
+test_real_chunks_exclude_metadata_from_search (test_keyword_retriever.KeywordTests.test_real_chunks_exclude_metadata_from_search) ... ok
+test_repeated_words_do_not_increase_score (test_keyword_retriever.KeywordTests.test_repeated_words_do_not_increase_score) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.061s
+
+OK

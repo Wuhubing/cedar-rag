@@ -1,0 +1,187 @@
+COMMAND: /var/folders/3c/gftrkkm50cx_tj2853841cq40000gn/T/cedar-rag-final-check-xoemu2uo/cedar-rag/.venv/bin/python -m unittest discover -s tests -v
+EXIT: 0
+
+test_cli_k_argument (test_keyword_retriever.KeywordTests.test_cli_k_argument) ... ok
+test_cli_no_matches (test_keyword_retriever.KeywordTests.test_cli_no_matches) ... ok
+test_exact_stopwords_and_no_stemming (test_keyword_retriever.KeywordTests.test_exact_stopwords_and_no_stemming) ... ok
+test_q1_scores_and_tiebreaking (test_keyword_retriever.KeywordTests.test_q1_scores_and_tiebreaking) ... ok
+test_real_chunks_exclude_metadata_from_search (test_keyword_retriever.KeywordTests.test_real_chunks_exclude_metadata_from_search) ... ok
+test_repeated_words_do_not_increase_score (test_keyword_retriever.KeywordTests.test_repeated_words_do_not_increase_score) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.056s
+
+OK
+
+
+COMMAND: /var/folders/3c/gftrkkm50cx_tj2853841cq40000gn/T/cedar-rag-final-check-xoemu2uo/cedar-rag/.venv/bin/python keyword_retriever.py May a trained graduate student operate the laser alone at 19:00? --k 2
+EXIT: 0
+Question: May a trained graduate student operate the laser alone at 19:00?
+Method: keyword (distinct word overlap)
+k: 2
+Chunks loaded: 6
+Query words: 00, 19, alone, graduate, laser, operate, student, trained
+
+All scores (descending score, then ascending chunk ID):
+ID	Filename	Score	Matched words
+A1	access.txt	3	00, graduate, trained
+A2	access.txt	2	laser, trained
+B1	booking.txt	1	laser
+T1	training.txt	1	laser
+T2	training.txt	1	trained
+B2	booking.txt	0	(none)
+
+Selected IDs: A1, A2
+
+ID: A1
+Filename: access.txt
+Score: 3
+Text: General laboratory access hours are 08:00 to 22:00 for trained graduate students. Access outside these hours requires written approval from the lab manager.
+
+ID: A2
+Filename: access.txt
+Score: 2
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+
+
+COMMAND: /var/folders/3c/gftrkkm50cx_tj2853841cq40000gn/T/cedar-rag-final-check-xoemu2uo/cedar-rag/.venv/bin/python compare_retrieval.py
+EXIT: 0
+Running Q1: keyword k=2
+Running Q2: keyword k=2
+Running Q3: keyword k=2
+Running Q4: keyword k=2
+Running Q1-Q4: real CPU embeddings k=2 (one document encoding)
+Saved actual rankings and CSV with judgments left blank.
+Running Q1: real CPU embeddings k=1
+Running Q1: real CPU embeddings k=3
+Saved both actual k experiments. No answer was generated.
+
+
+
+COMMAND: /var/folders/3c/gftrkkm50cx_tj2853841cq40000gn/T/cedar-rag-final-check-xoemu2uo/cedar-rag/.venv/bin/python audit_retrieval.py
+EXIT: 0
+Task 3 retrieval audit (Codex-assisted, after recording actual rankings)
+Raw rankings: retrieval-runs.txt; blank judgments: results-unreviewed.csv.
+PASS: four actual queries, six source vectors, CPU run, normalized full vectors.
+PASS: all embedding rankings and printed scores independently reconstructed from saved vectors.
+Judgment convention: true = all required evidence is present; false = incomplete or absent.
+For Q4, required_ids=absent, both judgments=false, and coverage=N/A (no answer in corpus).
+
+Q1: May a trained graduate student operate the laser alone at 19:00?
+Keyword selects A1 (3), A2 (2). Required evidence coverage 2/2; missing none. Embedding selects A2 (0.68644575), T1 (0.58195294). Required evidence coverage 1/2; missing A1. A1 embedding rank is 4 (0.37424892). T1 does not supply access hours.
+  keyword: evidence_complete=true; coverage=2/2; missing=none.
+  embedding: evidence_complete=false; coverage=1/2; missing=A1.
+
+Q2: Can I use the laser without another person present?
+Keyword selects A2 (2), B1 (1). Required evidence coverage 1/1; missing none. Embedding selects A2 (0.58519334), T1 (0.43476067). Required evidence coverage 1/1; missing none. A2 shared keyword words: laser, present. The paraphrase is judged by whether its required passage is selected.
+  keyword: evidence_complete=true; coverage=1/1; missing=none.
+  embedding: evidence_complete=true; coverage=1/1; missing=none.
+
+Q3: How frequently must I refresh my laser qualification?
+Keyword selects T1 (2), A2 (1). Required evidence coverage 1/1; missing none. Embedding selects T1 (0.74202748), B1 (0.47119536). Required evidence coverage 1/1; missing none. T1 shared keyword words: laser, must. The paraphrase is judged by whether its required passage is selected.
+  keyword: evidence_complete=true; coverage=1/1; missing=none.
+  embedding: evidence_complete=true; coverage=1/1; missing=none.
+
+Q4: What is the laser wavelength?
+Keyword selects A2 (1), B1 (1). Embedding selects T1 (0.34772135), A2 (0.32082712). Wavelength is absent from all six sources. Both completeness fields are false. Nearest passages and positive scores do not establish answerability. Coverage ratio is not applicable.
+  keyword: evidence_complete=false; coverage=N/A; missing wavelength information.
+  embedding: evidence_complete=false; coverage=N/A; missing wavelength information.
+
+Q4 missing-information check: inspected all six original passages.
+A1 covers access hours; A2 covers two-person operation; T1 covers training renewal;
+T2 covers visitors; B1 covers bookings; B2 covers cancellation. None specifies a wavelength.
+Embedding retrieval returns the top k relative similarities even when the corpus cannot answer.
+Keyword retrieval also returns laser-related passages for Q4 because of literal overlap.
+Neither method's positive score establishes the presence of wavelength evidence.
+No generated answers or personal reflections are included.
+Q1 k experiment audit (actual runs in k-experiment.txt)
+Required IDs: A1, A2. Model, question, corpus, and scoring stayed the same.
+
+k=1: selected=A2; scores=0.68644575; coverage=1/2; evidence_complete=false; missing=A1.
+  Newly selected A2: the two-trained-person operating condition.
+k=2: selected=A2, T1; scores=0.68644575, 0.58195294; coverage=1/2; evidence_complete=false; missing=A1.
+  Newly selected T1: training renewal and a current training record.
+k=3: selected=A2, T1, B1; scores=0.68644575, 0.58195294, 0.53269621; coverage=1/2; evidence_complete=false; missing=A1.
+  Newly selected B1: the two-hour booking limit and equipment-calendar reservation.
+
+Training and booking details do not replace the numeric access-hour evidence in A1.
+A1 rank: 4; similarity: 0.37424892.
+PASS: independently reconstructed rankings/scores match the saved raw k runs.
+PASS: document/query vectors and scores agree across runs within 1e-7.
+No additional k value was tested, and no ranking was adjusted.
+Saved results.csv with all nine required columns, four rows and audited judgments.
+
+
+
+COMMAND: /var/folders/3c/gftrkkm50cx_tj2853841cq40000gn/T/cedar-rag-final-check-xoemu2uo/cedar-rag/.venv/bin/python verify_embedding_evidence.py
+EXIT: 0
+Independent audit of the actual saved Q1 embedding run
+Method: scalar coordinate products and math.fsum; no model rerun or fabricated vectors.
+PASS: archive metadata matches the six complete source texts; labels and filenames are separate.
+PASS: document matrix (6, 384), question matrix (1, 384), score matrix (1, 6).
+PASS: all full vectors are finite and retain the unrounded float32 model coordinates.
+PASS: transcript records CPU execution.
+PASS: A1 vector length = 1.0000000271 (within 1e-6 of 1).
+PASS: A2 vector length = 1.0000000853 (within 1e-6 of 1).
+PASS: T1 vector length = 0.9999999942 (within 1e-6 of 1).
+PASS: T2 vector length = 1.0000000849 (within 1e-6 of 1).
+PASS: B1 vector length = 1.0000000167 (within 1e-6 of 1).
+PASS: B2 vector length = 1.0000000524 (within 1e-6 of 1).
+PASS: Q1 vector length = 1.0000000392 (within 1e-6 of 1).
+PASS: all six saved dot scores agree with independent scalar sums within 1e-12.
+PASS: all six dot scores agree with direct cosine within 1e-6.
+PASS: the transcript's complete ranking and scores match the saved vectors.
+Top passage: A2
+First 12 products subtotal: 0.0161114999
+Remaining 372 products subtotal: 0.6703342467
+Full similarity: 0.6864457465
+Direct cosine: 0.6864456610
+Absolute difference: 8.54938960737e-08
+PASS: the two subtotals reconstruct the full dot score within 1e-12.
+Selected IDs (k=2): A2, T1
+Q1 required IDs: A1, A2
+Required evidence coverage: 1/2 = 0.5
+Missing required IDs: A1
+Evidence completeness: partial
+A2 supplies the operating condition; A1's numeric access hours are missing from the selected set.
+T1 supplies training requirements; it does not replace A1's access-hour evidence.
+Keyword Q1 selected A1, A2; embeddings at k=2 did not improve required evidence coverage in this run.
+Similarity scores and keyword overlap counts use different scales and must not be compared numerically.
+Smallest displayed coordinate: -0.1167 (T1, coordinate 5).
+Largest displayed coordinate: 0.1357 (T1, coordinate 12).
+Coordinates have no reliable individual semantic names; the vector as a whole represents text relationships.
+This is a retrieval audit, not a generated answer or a personal reflection.
+
+
+
+COMMAND: /var/folders/3c/gftrkkm50cx_tj2853841cq40000gn/T/cedar-rag-final-check-xoemu2uo/cedar-rag/.venv/bin/python prepare_answer_handoffs.py
+EXIT: 0
+Q1: saved question + A2, T1 + exact assignment prompt.
+Q4: saved question + T1, A2 + exact assignment prompt.
+
+
+
+COMMAND: /var/folders/3c/gftrkkm50cx_tj2853841cq40000gn/T/cedar-rag-final-check-xoemu2uo/cedar-rag/.venv/bin/python verify_answer_handoffs.py
+EXIT: 0
+Answer handoff and conversation provenance verification
+
+PASS: Q1 original input is exactly its question, selected A2, T1, and assignment prompt.
+PASS: Q1 original: distinct fresh chat outside the project; exact input delivered; response preserved verbatim; no answer-initiated tool calls in trace.
+PASS: Q1 revised: distinct fresh chat outside the project; exact input delivered; response preserved verbatim; no answer-initiated tool calls in trace.
+PASS: Q1 audit contains both actual answers, claim checks, missing-information review, and retry outcome.
+PASS: Q4 original input is exactly its question, selected T1, A2, and assignment prompt.
+PASS: Q4 original: distinct fresh chat outside the project; exact input delivered; response preserved verbatim; no answer-initiated tool calls in trace.
+PASS: Q4 revised: distinct fresh chat outside the project; exact input delivered; response preserved verbatim; no answer-initiated tool calls in trace.
+PASS: Q4 audit contains both actual answers, claim checks, missing-information review, and retry outcome.
+
+PASS: exactly two original attempts and one instruction revision per question; all four chats are distinct.
+PASS: retries retain the same questions, two source passages, and passage order.
+PASS: A1, T2, B1 and B2 were not supplied as answer evidence; no unselected IDs were cited.
+Scope: these checks verify saved inputs, traces and outputs. Semantic support judgments are recorded separately in each answer audit.
+
+
+
+
+PASS: regenerated results.csv and prepared Q1/Q4 inputs exactly match the original project.
+Scope: a disposable project copy reused the existing virtual environment and model cache; no clean-environment dependency reinstall was performed.

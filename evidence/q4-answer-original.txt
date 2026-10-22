@@ -1,0 +1,4 @@
+The supplied passages do not specify the laser’s wavelength.
+
+Claim audit:
+- The laser’s wavelength: unsupported; neither T1 nor A2 provides a wavelength.

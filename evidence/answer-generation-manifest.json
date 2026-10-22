@@ -1,0 +1,53 @@
+{
+  "generation_method": "Fresh projectless Codex chats, default configured model (model identifier not exposed by chat tools).",
+  "questions": {
+    "Q1": {
+      "original": {
+        "thread_id": "01a16146-9a37-7712-b50d-07fe9eef0065",
+        "title": "Cedar RAG Q1 cited answer",
+        "host_id": "local",
+        "cwd": "/Users/ww/Documents/Codex/2026-10-21/cedar-rag-q1-answer",
+        "turn_id": "01a16146-9b63-70c1-a344-c96e137f2fb5",
+        "message_id": "msg_02e8328cf3e3fc55016ad96a288fd0819fa72ec867de1eefee",
+        "input_file": "q1-answer-input.txt",
+        "answer_file": "q1-answer-original.txt",
+        "trace_file": "q1-answer-original-trace.json"
+      },
+      "revised": {
+        "thread_id": "01a16147-60d8-78d1-bfc7-794345b067da",
+        "title": "Cedar RAG Q1 revised cited answer",
+        "host_id": "local",
+        "cwd": "/Users/ww/Documents/Codex/2026-10-21/cedar-rag-q1-answer-revised",
+        "turn_id": "01a16147-61f3-7572-93eb-2d7b885a0c0f",
+        "message_id": "msg_0a029ea30ef9fb0b016ad96a59143881a184be09de7f03e52e",
+        "input_file": "q1-answer-revised-input.txt",
+        "answer_file": "q1-answer-revised.txt",
+        "trace_file": "q1-answer-revised-trace.json"
+      }
+    },
+    "Q4": {
+      "original": {
+        "thread_id": "01a16146-9c0a-7610-97d1-748dc1c47ed7",
+        "title": "Cedar RAG Q4 cited answer",
+        "host_id": "local",
+        "cwd": "/Users/ww/Documents/Codex/2026-10-21/cedar-rag-q4-answer",
+        "turn_id": "01a16146-9da6-7f90-8243-17367c1bd1a8",
+        "message_id": "msg_0bad93168b0e82f6016ad96a27b2b881a093b114f7a24c19a0",
+        "input_file": "q4-answer-input.txt",
+        "answer_file": "q4-answer-original.txt",
+        "trace_file": "q4-answer-original-trace.json"
+      },
+      "revised": {
+        "thread_id": "01a16147-62b7-7583-acf7-53a0bcd41205",
+        "title": "Cedar RAG Q4 revised cited answer",
+        "host_id": "local",
+        "cwd": "/Users/ww/Documents/Codex/2026-10-21/cedar-rag-q4-answer-revised",
+        "turn_id": "01a16147-648b-7e23-8aea-52ec52e86131",
+        "message_id": "msg_046b43396f9fc42a016ad96a59ea3c819d811170bd55cd7af3",
+        "input_file": "q4-answer-revised-input.txt",
+        "answer_file": "q4-answer-revised.txt",
+        "trace_file": "q4-answer-revised-trace.json"
+      }
+    }
+  }
+}

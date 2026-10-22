@@ -1,0 +1,128 @@
+[
+  {
+    "k": 1,
+    "ranking": [
+      {
+        "rank": 1,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.68644575,
+        "cosine": 0.68644566
+      },
+      {
+        "rank": 2,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.58195294,
+        "cosine": 0.58195292
+      },
+      {
+        "rank": 3,
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 0.53269621,
+        "cosine": 0.53269618
+      },
+      {
+        "rank": 4,
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0.37424892,
+        "cosine": 0.3742489
+      },
+      {
+        "rank": 5,
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 0.27045221,
+        "cosine": 0.27045217
+      },
+      {
+        "rank": 6,
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0.12873971,
+        "cosine": 0.1287397
+      }
+    ],
+    "selected": [
+      {
+        "rank": 1,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.68644575,
+        "cosine": 0.68644566
+      }
+    ]
+  },
+  {
+    "k": 3,
+    "ranking": [
+      {
+        "rank": 1,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.68644575,
+        "cosine": 0.68644566
+      },
+      {
+        "rank": 2,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.58195294,
+        "cosine": 0.58195292
+      },
+      {
+        "rank": 3,
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 0.53269621,
+        "cosine": 0.53269618
+      },
+      {
+        "rank": 4,
+        "id": "A1",
+        "filename": "access.txt",
+        "score": 0.37424892,
+        "cosine": 0.3742489
+      },
+      {
+        "rank": 5,
+        "id": "T2",
+        "filename": "training.txt",
+        "score": 0.27045221,
+        "cosine": 0.27045217
+      },
+      {
+        "rank": 6,
+        "id": "B2",
+        "filename": "booking.txt",
+        "score": 0.12873971,
+        "cosine": 0.1287397
+      }
+    ],
+    "selected": [
+      {
+        "rank": 1,
+        "id": "A2",
+        "filename": "access.txt",
+        "score": 0.68644575,
+        "cosine": 0.68644566
+      },
+      {
+        "rank": 2,
+        "id": "T1",
+        "filename": "training.txt",
+        "score": 0.58195294,
+        "cosine": 0.58195292
+      },
+      {
+        "rank": 3,
+        "id": "B1",
+        "filename": "booking.txt",
+        "score": 0.53269621,
+        "cosine": 0.53269618
+      }
+    ]
+  }
+]

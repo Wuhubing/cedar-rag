@@ -1,0 +1,15 @@
+Q1 k experiment audit (actual runs in k-experiment.txt)
+Required IDs: A1, A2. Model, question, corpus, and scoring stayed the same.
+
+k=1: selected=A2; scores=0.68644575; coverage=1/2; evidence_complete=false; missing=A1.
+  Newly selected A2: the two-trained-person operating condition.
+k=2: selected=A2, T1; scores=0.68644575, 0.58195294; coverage=1/2; evidence_complete=false; missing=A1.
+  Newly selected T1: training renewal and a current training record.
+k=3: selected=A2, T1, B1; scores=0.68644575, 0.58195294, 0.53269621; coverage=1/2; evidence_complete=false; missing=A1.
+  Newly selected B1: the two-hour booking limit and equipment-calendar reservation.
+
+Training and booking details do not replace the numeric access-hour evidence in A1.
+A1 rank: 4; similarity: 0.37424892.
+PASS: independently reconstructed rankings/scores match the saved raw k runs.
+PASS: document/query vectors and scores agree across runs within 1e-7.
+No additional k value was tested, and no ranking was adjusted.

@@ -1,0 +1,352 @@
+Actual retrieval runs: Q1-Q4; keyword and embedding; k=2.
+Rankings were recorded before evidence-completeness judgments.
+
+=== Q1: keyword ===
+Command: /Users/ww/Desktop/26f/software/cedar-rag/.venv/bin/python /Users/ww/Desktop/26f/software/cedar-rag/keyword_retriever.py 'May a trained graduate student operate the laser alone at 19:00?' --k 2
+Question: May a trained graduate student operate the laser alone at 19:00?
+Method: keyword (distinct word overlap)
+k: 2
+Chunks loaded: 6
+Query words: 00, 19, alone, graduate, laser, operate, student, trained
+
+All scores (descending score, then ascending chunk ID):
+ID	Filename	Score	Matched words
+A1	access.txt	3	00, graduate, trained
+A2	access.txt	2	laser, trained
+B1	booking.txt	1	laser
+T1	training.txt	1	laser
+T2	training.txt	1	trained
+B2	booking.txt	0	(none)
+
+Selected IDs: A1, A2
+
+ID: A1
+Filename: access.txt
+Score: 3
+Text: General laboratory access hours are 08:00 to 22:00 for trained graduate students. Access outside these hours requires written approval from the lab manager.
+
+ID: A2
+Filename: access.txt
+Score: 2
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+=== Q2: keyword ===
+Command: /Users/ww/Desktop/26f/software/cedar-rag/.venv/bin/python /Users/ww/Desktop/26f/software/cedar-rag/keyword_retriever.py 'Can I use the laser without another person present?' --k 2
+Question: Can I use the laser without another person present?
+Method: keyword (distinct word overlap)
+k: 2
+Chunks loaded: 6
+Query words: another, laser, person, present, use, without
+
+All scores (descending score, then ascending chunk ID):
+ID	Filename	Score	Matched words
+A2	access.txt	2	laser, present
+B1	booking.txt	1	laser
+T1	training.txt	1	laser
+A1	access.txt	0	(none)
+B2	booking.txt	0	(none)
+T2	training.txt	0	(none)
+
+Selected IDs: A2, B1
+
+ID: A2
+Filename: access.txt
+Score: 2
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+ID: B1
+Filename: booking.txt
+Score: 1
+Text: Laser room bookings are limited to two hours per session. Reserve the room through the equipment calendar.
+
+=== Q3: keyword ===
+Command: /Users/ww/Desktop/26f/software/cedar-rag/.venv/bin/python /Users/ww/Desktop/26f/software/cedar-rag/keyword_retriever.py 'How frequently must I refresh my laser qualification?' --k 2
+Question: How frequently must I refresh my laser qualification?
+Method: keyword (distinct word overlap)
+k: 2
+Chunks loaded: 6
+Query words: frequently, how, laser, must, my, qualification, refresh
+
+All scores (descending score, then ascending chunk ID):
+ID	Filename	Score	Matched words
+T1	training.txt	2	laser, must
+A2	access.txt	1	laser
+B1	booking.txt	1	laser
+A1	access.txt	0	(none)
+B2	booking.txt	0	(none)
+T2	training.txt	0	(none)
+
+Selected IDs: T1, A2
+
+ID: T1
+Filename: training.txt
+Score: 2
+Text: Laser training must be renewed every 12 months. A current training record is required before operating the laser.
+
+ID: A2
+Filename: access.txt
+Score: 1
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+=== Q4: keyword ===
+Command: /Users/ww/Desktop/26f/software/cedar-rag/.venv/bin/python /Users/ww/Desktop/26f/software/cedar-rag/keyword_retriever.py 'What is the laser wavelength?' --k 2
+Question: What is the laser wavelength?
+Method: keyword (distinct word overlap)
+k: 2
+Chunks loaded: 6
+Query words: laser, wavelength, what
+
+All scores (descending score, then ascending chunk ID):
+ID	Filename	Score	Matched words
+A2	access.txt	1	laser
+B1	booking.txt	1	laser
+T1	training.txt	1	laser
+A1	access.txt	0	(none)
+B2	booking.txt	0	(none)
+T2	training.txt	0	(none)
+
+Selected IDs: A2, B1
+
+ID: A2
+Filename: access.txt
+Score: 1
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+ID: B1
+Filename: booking.txt
+Score: 1
+Text: Laser room bookings are limited to two hours per session. Reserve the room through the equipment calendar.
+
+=== Q1-Q4: embeddings ===
+Command: /Users/ww/Desktop/26f/software/cedar-rag/.venv/bin/python /Users/ww/Desktop/26f/software/cedar-rag/embedding_retriever.py 'May a trained graduate student operate the laser alone at 19:00?' 'Can I use the laser without another person present?' 'How frequently must I refresh my laser qualification?' 'What is the laser wavelength?' --k 2 --save-vectors evidence/embedding-vectors-q1-q4.npz
+Model: sentence-transformers/all-MiniLM-L6-v2
+Python: 3.13.2
+sentence-transformers: 6.2.0
+numpy: 2.5.4
+torch: 2.14.1
+transformers: 5.20.2
+huggingface-hub: 2.2.0
+Loading model on CPU...
+Device: cpu
+Model output dtype: float32; calculation dtype: float64
+Document matrix shape: (6, 384)
+Document encoding calls: 1; this same matrix is reused across questions.
+Normalization requested for documents and questions: normalize_embeddings=True
+All 384 coordinates are used in retrieval, not just the displayed first 12.
+Only passage text is encoded; IDs and filenames remain separate metadata.
+Displayed coordinates are rounded to four decimals; calculations use unrounded coordinates.
+Individual coordinates have no assigned semantic names.
+
+Document vectors (first 12 coordinates):
+A1 (access.txt): [-0.0039, 0.0188, 0.0218, -0.0179, -0.0058, -0.0612, -0.0891, 0.0321, -0.0584, 0.0111, 0.0031, -0.0123]
+  Length: 1.0000000271; approximately 1: PASS
+A2 (access.txt): [0.0298, -0.0435, -0.0289, 0.0303, -0.0507, -0.0310, 0.0361, -0.0391, -0.0322, -0.0424, 0.0498, 0.0019]
+  Length: 1.0000000853; approximately 1: PASS
+T1 (training.txt): [0.0063, -0.0708, 0.0345, 0.0146, -0.1167, -0.0114, -0.0708, -0.0761, -0.0806, -0.0767, 0.0325, 0.1357]
+  Length: 0.9999999942; approximately 1: PASS
+T2 (training.txt): [0.0447, -0.0044, 0.0042, -0.0058, 0.0211, -0.0151, -0.0108, -0.0301, -0.0191, -0.0234, 0.0280, -0.0367]
+  Length: 1.0000000849; approximately 1: PASS
+B1 (booking.txt): [0.0856, -0.0417, -0.0194, 0.0377, -0.0668, -0.0053, -0.0260, -0.0618, -0.0186, -0.0023, -0.0050, 0.0659]
+  Length: 1.0000000167; approximately 1: PASS
+B2 (booking.txt): [0.0673, 0.0924, -0.0079, 0.0634, -0.0105, 0.0043, -0.0020, -0.0750, 0.0667, 0.0378, -0.0040, 0.0335]
+  Length: 1.0000000524; approximately 1: PASS
+
+Question 1: May a trained graduate student operate the laser alone at 19:00?
+Query vector shape: (384,)
+Query first 12 coordinates: [0.0485, 0.0060, -0.0148, -0.0017, -0.0642, -0.0427, 0.0008, -0.0575, -0.0771, -0.0306, 0.0749, 0.0967]
+Query length: 1.0000000392; approximately 1: PASS
+k: 2; always select the top k available passages; no relevance threshold.
+
+All scores (descending score, then ascending chunk ID):
+Rank	ID	Filename	Dot product	Direct cosine
+1	A2	access.txt	0.68644575	0.68644566
+2	T1	training.txt	0.58195294	0.58195292
+3	B1	booking.txt	0.53269621	0.53269618
+4	A1	access.txt	0.37424892	0.37424890
+5	T2	training.txt	0.27045221	0.27045217
+6	B2	booking.txt	0.12873971	0.12873970
+All six dot/cosine comparisons: PASS (absolute tolerance 1e-06)
+Selected IDs: A2, T1
+
+ID: A2
+Filename: access.txt
+Score: 0.68644575
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+ID: T1
+Filename: training.txt
+Score: 0.58195294
+Text: Laser training must be renewed every 12 months. A current training record is required before operating the laser.
+
+Coordinate products for the top passage A2 (1-based coordinates):
+Coordinate	Query (4 d.p.)	Document (4 d.p.)	Product (unrounded inputs)
+1	0.0485	0.0298	0.0014475211
+2	0.0060	-0.0435	-0.0002631060
+3	-0.0148	-0.0289	0.0004261923
+4	-0.0017	0.0303	-0.0000504139
+5	-0.0642	-0.0507	0.0032577505
+6	-0.0427	-0.0310	0.0013239657
+7	0.0008	0.0361	0.0000280458
+8	-0.0575	-0.0391	0.0022502848
+9	-0.0771	-0.0322	0.0024829712
+10	-0.0306	-0.0424	0.0012972566
+11	0.0749	0.0498	0.0037300771
+12	0.0967	0.0019	0.0001809546
+First 12 products subtotal: 0.0161114999
+Remaining 372 products subtotal: 0.6703342467
+Full 384-coordinate dot product: 0.6864457465
+Cosine calculated directly from vector lengths: 0.6864456610
+Absolute dot/cosine difference: 8.54938960737e-08
+Subtotal reconstruction: PASS (absolute tolerance 1e-12)
+
+Question 2: Can I use the laser without another person present?
+Query vector shape: (384,)
+Query first 12 coordinates: [-0.0378, -0.0049, -0.0282, -0.0339, -0.0531, -0.0218, 0.1002, -0.0135, -0.0502, -0.0710, 0.0827, 0.0600]
+Query length: 0.9999999730; approximately 1: PASS
+k: 2; always select the top k available passages; no relevance threshold.
+
+All scores (descending score, then ascending chunk ID):
+Rank	ID	Filename	Dot product	Direct cosine
+1	A2	access.txt	0.58519334	0.58519330
+2	T1	training.txt	0.43476067	0.43476068
+3	B1	booking.txt	0.42535616	0.42535616
+4	T2	training.txt	0.19075387	0.19075386
+5	B2	booking.txt	0.05762303	0.05762302
+6	A1	access.txt	0.03563603	0.03563603
+All six dot/cosine comparisons: PASS (absolute tolerance 1e-06)
+Selected IDs: A2, T1
+
+ID: A2
+Filename: access.txt
+Score: 0.58519334
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+ID: T1
+Filename: training.txt
+Score: 0.43476067
+Text: Laser training must be renewed every 12 months. A current training record is required before operating the laser.
+
+Coordinate products for the top passage A2 (1-based coordinates):
+Coordinate	Query (4 d.p.)	Document (4 d.p.)	Product (unrounded inputs)
+1	-0.0378	0.0298	-0.0011275254
+2	-0.0049	-0.0435	0.0002149565
+3	-0.0282	-0.0289	0.0008127893
+4	-0.0339	0.0303	-0.0010275753
+5	-0.0531	-0.0507	0.0026957057
+6	-0.0218	-0.0310	0.0006763830
+7	0.1002	0.0361	0.0036119184
+8	-0.0135	-0.0391	0.0005261818
+9	-0.0502	-0.0322	0.0016171780
+10	-0.0710	-0.0424	0.0030113236
+11	0.0827	0.0498	0.0041206495
+12	0.0600	0.0019	0.0001122196
+First 12 products subtotal: 0.0152442047
+Remaining 372 products subtotal: 0.5699491311
+Full 384-coordinate dot product: 0.5851933358
+Cosine calculated directly from vector lengths: 0.5851933017
+Absolute dot/cosine difference: 3.4124591819e-08
+Subtotal reconstruction: PASS (absolute tolerance 1e-12)
+
+Question 3: How frequently must I refresh my laser qualification?
+Query vector shape: (384,)
+Query first 12 coordinates: [0.0380, -0.0875, 0.0199, 0.0502, -0.0631, -0.0597, -0.0213, -0.0518, -0.0799, -0.0435, -0.0137, 0.0732]
+Query length: 1.0000000347; approximately 1: PASS
+k: 2; always select the top k available passages; no relevance threshold.
+
+All scores (descending score, then ascending chunk ID):
+Rank	ID	Filename	Dot product	Direct cosine
+1	T1	training.txt	0.74202748	0.74202746
+2	B1	booking.txt	0.47119536	0.47119534
+3	A2	access.txt	0.44925738	0.44925733
+4	A1	access.txt	0.23632715	0.23632714
+5	B2	booking.txt	0.14731016	0.14731015
+6	T2	training.txt	0.04095162	0.04095161
+All six dot/cosine comparisons: PASS (absolute tolerance 1e-06)
+Selected IDs: T1, B1
+
+ID: T1
+Filename: training.txt
+Score: 0.74202748
+Text: Laser training must be renewed every 12 months. A current training record is required before operating the laser.
+
+ID: B1
+Filename: booking.txt
+Score: 0.47119536
+Text: Laser room bookings are limited to two hours per session. Reserve the room through the equipment calendar.
+
+Coordinate products for the top passage T1 (1-based coordinates):
+Coordinate	Query (4 d.p.)	Document (4 d.p.)	Product (unrounded inputs)
+1	0.0380	0.0063	0.0002379548
+2	-0.0875	-0.0708	0.0061950888
+3	0.0199	0.0345	0.0006877008
+4	0.0502	0.0146	0.0007348602
+5	-0.0631	-0.1167	0.0073666281
+6	-0.0597	-0.0114	0.0006812307
+7	-0.0213	-0.0708	0.0015070590
+8	-0.0518	-0.0761	0.0039453819
+9	-0.0799	-0.0806	0.0064458747
+10	-0.0435	-0.0767	0.0033396889
+11	-0.0137	0.0325	-0.0004459857
+12	0.0732	0.1357	0.0099373564
+First 12 products subtotal: 0.0406328386
+Remaining 372 products subtotal: 0.7013946409
+Full 384-coordinate dot product: 0.7420274795
+Cosine calculated directly from vector lengths: 0.7420274580
+Absolute dot/cosine difference: 2.14577816626e-08
+Subtotal reconstruction: PASS (absolute tolerance 1e-12)
+
+Question 4: What is the laser wavelength?
+Query vector shape: (384,)
+Query first 12 coordinates: [0.0241, -0.0074, -0.0795, 0.0196, -0.0920, -0.0008, 0.0842, 0.0203, -0.0357, -0.0252, 0.0360, -0.0204]
+Query length: 0.9999999451; approximately 1: PASS
+k: 2; always select the top k available passages; no relevance threshold.
+
+All scores (descending score, then ascending chunk ID):
+Rank	ID	Filename	Dot product	Direct cosine
+1	T1	training.txt	0.34772135	0.34772138
+2	A2	access.txt	0.32082712	0.32082711
+3	B1	booking.txt	0.31150098	0.31150099
+4	A1	access.txt	0.05795069	0.05795069
+5	B2	booking.txt	-0.04349698	-0.04349698
+6	T2	training.txt	-0.05448818	-0.05448817
+All six dot/cosine comparisons: PASS (absolute tolerance 1e-06)
+Selected IDs: T1, A2
+
+ID: T1
+Filename: training.txt
+Score: 0.34772135
+Text: Laser training must be renewed every 12 months. A current training record is required before operating the laser.
+
+ID: A2
+Filename: access.txt
+Score: 0.32082712
+Text: The laser room requires two trained people to be present whenever the laser is operating, including during general laboratory access hours.
+
+Coordinate products for the top passage T1 (1-based coordinates):
+Coordinate	Query (4 d.p.)	Document (4 d.p.)	Product (unrounded inputs)
+1	0.0241	0.0063	0.0001508795
+2	-0.0074	-0.0708	0.0005244852
+3	-0.0795	0.0345	-0.0027412585
+4	0.0196	0.0146	0.0002871615
+5	-0.0920	-0.1167	0.0107340656
+6	-0.0008	-0.0114	0.0000096130
+7	0.0842	-0.0708	-0.0059607149
+8	0.0203	-0.0761	-0.0015458510
+9	-0.0357	-0.0806	0.0028779183
+10	-0.0252	-0.0767	0.0019312441
+11	0.0360	0.0325	0.0011706495
+12	-0.0204	0.1357	-0.0027625069
+First 12 products subtotal: 0.0046756853
+Remaining 372 products subtotal: 0.3430456696
+Full 384-coordinate dot product: 0.3477213549
+Cosine calculated directly from vector lengths: 0.3477213760
+Absolute dot/cosine difference: 2.10998710171e-08
+Subtotal reconstruction: PASS (absolute tolerance 1e-12)
+
+Extrema among displayed coordinates (not across all 384 coordinates):
+Smallest: -0.1167 (T1, coordinate 5)
+Largest: 0.1357 (T1, coordinate 12)
+Neither extreme alone explains a passage; similarity uses the whole vector.
+
+Saved full unrounded vectors and scores: evidence/embedding-vectors-q1-q4.npz
+Retrieval inspection only; no answer generated.
