@@ -1,0 +1,93 @@
+Cedar RAG final assignment and rubric review
+Client review date: 2026-10-22 (America/New_York).
+Repository: https://github.com/Wuhubing/cedar-rag
+Branch: main; repository visibility: public.
+
+Scope: compare the saved project and GitHub files with the supplied assignment,
+verify required artifacts and recorded numerical evidence, and remove the
+obsolete reflection draft. This is a completeness review, not an instructor grade.
+
+1. Visible embedding process — rubric weight 3 points
+Material status: COMPLETE; numerical checks PASS.
+- Model sentence-transformers/all-MiniLM-L6-v2 was actually loaded on CPU.
+- The six-document matrix is (6, 384); each question has 384 coordinates.
+- Real vector prefixes, lengths, normalization, all six scores, top-passage
+  coordinate products and both subtotals are saved.
+- Full unrounded vectors and metadata are preserved in four NPZ archives.
+- Independent scalar reconstruction agrees with saved dot scores; direct cosine
+  agrees within numerical tolerance. No fabricated values or forced ranking.
+Evidence: embedding-inspection.txt, embedding-audit.txt, embedding-vectors-*.npz,
+final-environment-check.txt, README.md and the retriever source.
+
+2. Retrieval comparison — rubric weight 3 points
+Material status: COMPLETE; data/schema checks PASS.
+- Q1-Q4 were actually run with both methods at k=2.
+- results.csv contains exactly four question rows and all nine required columns;
+  selected IDs and their scores are aligned in rank order.
+- The original CSV with blank judgment fields is preserved separately.
+- Q1 keyword evidence is complete (2/2); embedding evidence is partial (1/2).
+- Q2 and Q3 retrieve the required passage with both methods.
+- Q4 required_ids is absent; both evidence-complete fields are false, and no
+  empty-denominator coverage or positive-score answerability claim is used.
+- Q1 k=1 and k=3 were actually run; neither retrieves A1, and the added training
+  and booking details are explained without adjusting the results.
+Evidence: results.csv, retrieval-runs.txt, retrieval-audit.txt,
+results-unreviewed.csv, k-experiment.txt, k-experiment-audit.txt and saved vectors.
+
+3. Grounded answer audit — rubric weight 2 points
+Material status: COMPLETE; recorded handoff checks PASS.
+- Q1 received only A2/T1 and Q4 only T1/A2 from embedding top-2 results.
+- Each original answer used a fresh projectless chat with the question, selected
+  passages, and the assignment prompt. Saved traces show no answer-initiated tools.
+- Both original outputs are preserved. One instruction revision per question
+  used identical evidence in another fresh chat; no missing source was added.
+- Claim-by-claim audits verify supporting IDs and distinguish absent information.
+- The revised Q1 retains the two-trained-person condition and acknowledges
+  missing access-hour evidence. Q4 states that wavelength is unspecified.
+Evidence: q1-answer-audit.txt, q4-answer-audit.txt, original/revised input/output
+files, conversation traces, answer-generation-manifest.json and
+answer-handoff-verification.txt.
+
+4. Reproducibility and explanation — rubric weight 2 points
+Technical material status: COMPLETE; personal-authorship requirement needs author attention.
+- README documents setup, run/verification commands, model/package versions,
+  source preparation, code operations, results and limitations.
+- All 41 installed dependency versions match requirements.txt; the existing
+  environment has passed dependency and real CPU encoding checks.
+- A disposable-copy command check previously ran seven documented commands,
+  including six keyword tests and the comparison/audit/handoff checks.
+- At this final review, all six keyword tests, full-vector numeric checks and
+  saved-answer handoff checks passed again.
+- Individual work and the Wuhubing Git/GitHub author identity are recorded;
+  partner and pair-role fields are not applicable.
+- reflections/participant-1.txt is present, 139 words excluding its author line,
+  and covers the workflow, an observed failure, and a proposed next test.
+- The proposed image-embedding extension is presented as future work, not as
+  functionality or source material used in this text-only experiment.
+- The handout says: "Do not ask Codex to write your personal explanation."
+  The current reflection incorporates the author's additional ideas and disclosed
+  AI-assisted editing. Presence, length, and content coverage pass, but these file
+  checks cannot certify compliance with the personally written requirement.
+  For strict compliance, the author should write the final wording personally.
+- The author should also be able to explain the code and judgments in their own
+  words; a repository audit cannot establish that understanding.
+
+Cleanup and submission state
+- The obsolete file reflections/reflection-draft.txt is deleted from the current
+  version, and its live documentation links have been removed.
+- The formal reflection and all original answer-audit evidence remain intact.
+- README, results.csv and the required evidence are complete; no required
+  technical artifact is missing.
+- Changes are committed and pushed; final local/remote file equality and public
+  access are checked after publication rather than storing a self-referential
+  final commit ID in this report.
+- Existing environment/model cache were reused; no fresh-machine reinstall was
+  performed or claimed.
+- The course signup form has not been submitted; its URL was not provided.
+
+Conclusion
+The public repository is technically ready to submit. To claim full compliance
+with every written requirement, the author must address the personally written
+reflection requirement and confirm the course submission name if different from
+Wuhubing. No guaranteed numeric grade is assigned by this review.
+Submit repository URL: https://github.com/Wuhubing/cedar-rag

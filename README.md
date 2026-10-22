@@ -23,17 +23,15 @@ submitted.
   Confirm the course submission name if it differs from the Git/GitHub identity.
 - Final individual reflection: **complete**, 139 words, saved as
   [reflections/participant-1.txt](reflections/participant-1.txt).
-- The author explicitly requested an AI-assisted draft, provided separately in
-  [reflections/reflection-draft.txt](reflections/reflection-draft.txt) for revision.
-  That earlier draft is retained separately; the author-approved final version
-  incorporates the author's additional reflection and editorial assistance.
+- The author-approved final version incorporates the author's additional ideas
+  and AI-assisted editing. The obsolete draft has been removed from this version.
 - There is no partner; pair roles and role swaps are not applicable.
 - Existing evidence was generated locally or in the recorded independent answer
   chats. No borrowed pair/instructor output is recorded. Label any later borrowed
   output with its source.
 
-The reflection instructions contain the course requirements; the separate draft
-is explicitly labeled with its AI assistance and draft status.
+The reflection instructions contain the course's personal-authorship requirement.
+The final review distinguishes complete technical materials from that requirement.
 
 ## Environment and setup
 
@@ -278,6 +276,7 @@ success. This manual handoff is a teaching workflow, not a deployed application.
 | Handoff verification | `evidence/answer-handoff-verification.txt` |
 | Final commands/completeness check | `evidence/final-command-checks.txt`, `evidence/submission-check.txt` (historical Step 7 baseline) |
 | GitHub publication and submission URL | [evidence/github-publication-check.txt](evidence/github-publication-check.txt) |
+| Final assignment/rubric review | [evidence/final-rubric-review.txt](evidence/final-rubric-review.txt) |
 
 The `.npz` archives contain all unrounded coordinates, scores, questions, source
 texts and separate IDs/filenames: `embedding-vectors-q1.npz`,
@@ -321,6 +320,8 @@ be rebuilt using the setup commands and pinned requirements above.
 - [x] Push this project to a same-name public GitHub repository and verify anonymous access.
 - [ ] Submit the repository link through the course signup sheet.
 
-The earlier AI-assisted reflection draft is preserved. The final reflection was
-approved by the author after adding their own ideas and is saved separately.
-The course signup-sheet URL was not supplied and has not been guessed.
+The final reflection was approved by the author after adding their own ideas and
+AI-assisted editing; the obsolete draft has been deleted from the current version.
+The handout asks for a personally written reflection, so the author should ensure
+the final wording meets that requirement. The course signup-sheet URL was not
+supplied and has not been guessed.

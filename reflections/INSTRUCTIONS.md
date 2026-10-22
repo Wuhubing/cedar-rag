@@ -4,13 +4,12 @@ The assignment requires one individual reflection per participant, **no more tha
 150 words per person**. Do not ask Codex to write your personal explanation.
 This file is an instruction sheet, not a completed reflection.
 
-At your explicit request, `reflection-draft.txt` contains a separately labeled
-AI-assisted draft for revision. It is not marked as your final reflection.
 The project is confirmed as individual work, so only `participant-1.txt` is needed.
 
 Current status: `participant-1.txt` contains the author-approved final reflection
 (139 words), incorporating the author's additional ideas and editorial assistance.
-The earlier AI-assisted draft remains separate for provenance.
+The obsolete draft has been removed. The final version used AI-assisted editing;
+check the course's personally written reflection requirement before submission.
 
 In your own words, cover all three points:
 

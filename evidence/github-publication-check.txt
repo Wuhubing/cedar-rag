@@ -34,7 +34,8 @@ Reflection finalization update (2026-10-22 client date):
 - The author supplied additional reflection ideas and approved the edited version.
 - The final individual reflection is saved as reflections/participant-1.txt.
 - The reflection body is 139 words, within the 150-word limit.
-- The earlier AI-assisted draft is preserved separately; it is not the final file.
+- The author later requested removal of the obsolete draft; it is deleted from
+  the current version. The final file retains the author's approved reflection.
 
 Remaining before course submission:
 1. Confirm the course submission name if it differs from the Git/GitHub identity.

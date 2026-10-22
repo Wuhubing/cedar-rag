@@ -1,8 +1,0 @@
-AI-assisted reflection draft — revise in your own words before submission
-Project author identity: Wuhubing (GitHub/Git identity)
-Status: draft, not a completed self-written individual reflection
-Draft body word count: 118
-
-In this workflow, a question and six source passages are prepared separately. Keyword retrieval counts distinct shared words, while embedding retrieval converts text into normalized 384-dimensional vectors and ranks passages by dot product. The selected passages are then provided to a fresh conversation, which writes an answer with chunk citations. Each claim must be checked against its cited text.
-
-One limitation was Q1: embeddings retrieved A2 and T1 at k=2, missing A1’s access hours. Increasing k to 3 still missed A1. Q4 also showed that positive similarity does not mean the sources contain an answer. Next, I would test a hybrid keyword-and-embedding ranking to see whether it retrieves both A1 and A2 without adding too much unrelated evidence.
